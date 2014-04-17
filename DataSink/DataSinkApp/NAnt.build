@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+    <project name="DataSinkApp" default="build" basedir=".">
+        <description>Data Sink Application</description>
+        <property name="debug" value="true" overwrite="false" />
+        <target name="clean" description="remove all generated files">
+            <delete file="DataSinkApp.exe" failonerror="false" />
+            <delete file="DataSinkApp.pdb" failonerror="false" />
+        </target>
+        <target name="build" description="compiles the source code">
+            <csc target="exe" output="DataSinkApp.exe" debug="${debug}">
+                <sources>
+                    <includes name="DataSinkApp.cs" />
+                </sources>
+            </csc>
+        </target>
+    </project>

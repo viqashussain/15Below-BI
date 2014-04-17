@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataSinkApp</name>
+    </assembly>
+    <members>
+        <member name="T:DataSinkApp.Extract.ExtractThread">
+            <summary>
+            Class which contains all the functionality for the Extract process
+            which will copy the neccessary data from the PASNGR database, and copy
+            it to the StagingDB
+            </summary>
+        </member>
+        <member name="M:DataSinkApp.Extract.ExtractThread.ExtractData">
+            <summary>
+            Static method which we be called from Program.Main.
+            This method will extract the data from the PASNGR DB and copy it to
+            the StagingDB using BulkCopy.
+            </summary>
+            <returns>
+            bool - success or failure, true for errors, false for no errors
+            </returns>
+        </member>
+        <member name="M:DataSinkApp.Extract.ExtractThread.GetLastRecipientID">
+            <summary>
+            Static method which is used to get the last recipientID added
+            to the DataWarehouse. This is to ensure we don't retrieve any 
+            duplicate recipients or miss any recipients.
+            </summary>
+            <returns>
+            int - the recipientID (0 if no results returned)
+            </returns>
+        </member>
+        <member name="T:DataSinkApp.Load.Load">
+            <summary>
+            Class which contains all the functionality for the Load Process which 
+            will load the data into the DataWarehouse.
+            </summary>
+        </member>
+        <member name="M:DataSinkApp.Load.Load.LoadData">
+            <summary>
+            Static method which we be called from Program.Main.
+            This method will Load the data from the StagingDB into the
+            DataWarehouse by executing a Stored Procedure in the StagingDB. 
+            Once data loading is complete, another stored procedure
+            will be executed in the StagingDB to clean up the StagingDB.
+            </summary>
+            <returns>
+            bool - success or failure, true for errors, false for no errors
+            </returns>
+        </member>
+        <member name="T:DataSinkApp.Program">
+            <summary>
+            Main class for the application which will control the 
+            ETL (Extract, Transform, Load) Process and will
+            then reprocess the CUBE</summary>
+        </member>
+        <member name="M:DataSinkApp.Program.Main">
+            <summary>
+            The entry point for the application. The Extract, Load and 
+            Transform processes will be executed here, one after the other
+            unless an error occurs at one during one of the processes, 
+            in which case, the ETL process will stop.
+            </summary>
+        </member>
+        <member name="M:DataSinkApp.Program.ProcessCube">
+            <summary>
+            Static method which we be called from Main. This method
+            is responsible for processing the cube, which will take 
+            place one the ETL process is complete.
+            </summary>
+            <returns>
+            bool - success or failure, true for errors, false for no errors
+            </returns>
+        </member>
+        <member name="T:DataSinkApp.Transform.Transform">
+            <summary>
+            Class which contains all the functionality for the Transform process
+            which will transform the data as neccessary in the StagingDB.
+            </summary>
+        </member>
+        <member name="M:DataSinkApp.Transform.Transform.TransformData">
+            <summary>
+            Static method which we be called from Program.Main.
+            This method will Tranform the data in the StagingDB accordingly
+            by executing Stored Procedures in the StagingDB. This will also prepare
+            the data for Transfer to the DataWarehouse.
+            </summary>
+            <returns>
+            bool - success or failure, true for errors, false for no errors
+            </returns>
+        </member>
+    </members>
+</doc>
