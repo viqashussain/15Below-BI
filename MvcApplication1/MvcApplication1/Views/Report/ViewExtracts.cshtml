@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "PNRs";
+}
+@model MvcApplication1.Models.ExtractsModel
+<!DOCTYPE html>
+
+@if (Model.ExtractID.Count == 0)
+{<p>No PNRs to Display</p>}
+else if (Model == null)
+{<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else
+{
+    //if the model is empty
+    <html>
+    <head>
+        <title>@ViewBag.Title</title>
+    </head>
+        <h2>PNRs</h2>
+    <body>
+        @using (Html.BeginForm("Search", "Report"))
+        {
+            <p>
+                Search PNR
+        <input type="text" name="pnr" id="pnrtxtbox" placeholder="PNR" />
+                <input type="submit" value="Update" />
+            </p>
+        }
+        @using (Html.BeginForm("ExportExtracts", "Report", new { recipientID = Model.RecipientID, PNR = Model.PNR, dataSourceID = Model.DataSourceID, dataSourceName = Model.DataSourceName }))
+        {
+            <input type="submit" value="Export to CSV" />
+        }
+        @{if (Model.DataSourceName != "")
+          {
+            <p>PNRs for Data Source: @Model.DataSourceName</p>
+          }
+          else
+          {
+            <p>Displaying Recent PNRs</p>
+          }
+        }
+        <div id="DisplayData">
+            <table class="bordered">
+                <caption></caption>
+                <tr>
+                    <th>PNR</th>
+                    <th>Lead Passenger Name</th>
+                    <th>Total Number of Passengers</th>
+                    <th>Upload Date Time</th>
+                    <th>Booking Date</th>
+                    <th>Email Address</th>
+                    <th>Other Phone #</th>
+                    <th>Language Code</th>
+                    <th>Number of Flights</th>
+                    <th>View Data Source</th>
+                    <th>View Recipients</th>
+                    <th>View Passengers</th>
+                    <th>View Flights</th>
+                    <th>View Notifications</th>
+                </tr>
+
+                @for (int i = 0; i < Model.ExtractID.Count; i++)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(x => x.PNR[i])</td>
+                        <td>@Html.DisplayFor(x => x.LeadPaxName[i])</td>
+                        <td>@Html.DisplayFor(x => x.TotalPax[i])</td>
+                        <td>@Html.DisplayFor(x => x.UploadDateTime[i])</td>
+                        <td>@Html.DisplayFor(x => x.BookingDate[i])</td>
+                        <td>@Html.DisplayFor(x => x.EmailAddress[i])</td>
+                        <td>@Html.DisplayFor(x => x.OtherPhone[i])</td>
+                        <td>@Html.DisplayFor(x => x.LanguageCode[i])</td>
+                        <td>@Html.DisplayFor(x => x.NumberofFlights[i])</td>
+                        <td>@Html.ActionLink("View Data Source", "ViewDataSources", new { extractID = Model.ExtractID[i], pnr = Model.PNR[i] })</td>
+                        <td>@Html.ActionLink("View Recipients", "ViewRecipients", new { extractID = Model.ExtractID[i], pnr = Model.PNR[i] })</td>
+                        <td>@Html.ActionLink("View Passengers", "ViewPax", new { extractID = Model.ExtractID[i], pnr = Model.PNR[i] })</td>
+                        <td>@Html.ActionLink("View Flights", "ViewFlights", new { extractID = Model.ExtractID[i], pnr = Model.PNR[i] })</td>
+                        <td>@Html.ActionLink("View Notifications", "ViewNotifications", new { extractID = Model.ExtractID[i], pnr = Model.PNR[i] })</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+    </html>
+}

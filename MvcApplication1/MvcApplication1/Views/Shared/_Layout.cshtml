@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="../../Scripts/jsFunctions.js" type="text/javascript"> </script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <a href="@Url.Action("SelectReport", "Home")">
+                <img alt="Logo" src="../../Content/themes/base/images/logo.png" /></a>
+        </div>
+        <div id="menucontainer">
+            <ul id="menu">
+                <li>@Html.ActionLink("View Notifications", "ViewNotifications", "Report")</li>
+                <li>@Html.ActionLink("View Recipients", "ViewRecipients", "Report")</li>
+                <li>@Html.ActionLink("View PNRs", "ViewExtracts", "Report")</li>
+                <li>@Html.ActionLink("View Data Sources", "ViewDataSources", "Report")</li>
+            </ul>
+        </div>
+
+        <div id="main">
+            @RenderBody()
+        </div>
+    </div>
+    <div id="footer">
+    <footer>
+        <p>Viqas Hussain</p>
+        <p>Contact: viqashussain@hotmail.co.uk</p>
+        <p>© 2014 15below All Rights Reserved </p>
+    </footer>
+</div>
+</body>
+
+</html>

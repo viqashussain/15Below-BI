@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Passengers";
+}
+@model MvcApplication1.Models.PaxModel
+<!DOCTYPE html>
+
+@if (Model.PaxID.Count == 0) {<p>No Passengers to Display</p>} 
+else if (Model == null) {<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else {
+//if the model is empty
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+    <h2>Passengers</h2>
+<body>
+    <p>
+        Passengers for PNR @Model.PNR
+    </p>
+    <div id="DisplayData">
+        <table class="bordered">
+            <tr>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Passenger Type</th>
+                <th>Date of Birth</th>
+            </tr>
+
+            @for (int i = 0; i < Model.PaxID.Count; i++)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(x => x.PaxType[i])</td>
+                    <td>@Html.DisplayFor(x => x.PaxFirst[i])</td>
+                    <td>@Html.DisplayFor(x => x.PaxMiddle[i])</td>
+                    <td>@Html.DisplayFor(x => x.PaxLast[i])</td>
+                    <td>@Html.DisplayFor(x => x.PaxGender[i])</td>
+                    <td>@Html.DisplayFor(x => x.PaxType[i])</td>
+                    <td>@Html.DisplayFor(x => x.PaxDOB[i])</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+}

@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Data Sources";
+}
+@model MvcApplication1.Models.DataSourcesModel
+<!DOCTYPE html>
+@if (Model.DataSourceID.Count == 0) {<p>No Data Sources to Display</p>} 
+else if (Model == null) {<p>An error has occurred while trying to process your request. Please contact support if this issue persists.</p>}
+else {
+//if the model is empty
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+    <h2>Data Sources Uploaded</h2>
+<body>
+                @using (Html.BeginForm("Search", "Report"))
+    {
+            <p>Search Data Source Name
+            <input type="text" name="datasourcename" id="datasourcenametxtbox" placeholder="Data Source Name" />
+            <input type="submit" value="Update" /></p>
+    }
+
+          @{if (Model.NotificationName != "")
+          {
+            <p>Data Sources for Notification: @Model.NotificationName</p>
+          }
+          else if (Model.PNR != "")
+          {
+            <p>Data Source for PNR: @Model.PNR</p>
+          }
+          else
+          {
+            <p>Displaying Recent Data Sources Uploaded</p>
+          }
+        }
+    <div id="DisplayData">
+        <table class="bordered">
+            <caption></caption>
+            <tr>
+                <th>Data Source Name</th>
+                <th>Number of PNRs</th>
+                <th>Upload Date Time</th>
+                <th>Data Source Type</th>
+                <th>View Notifications</th>
+                <th>View PNRs</th>
+            </tr>
+            @for (int i = 0; i < Model.DataSourceID.Count; i++)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(x => x.DataSourceName[i])</td>
+                    <td>@Html.DisplayFor(x => x.ExtractsCount[i])</td>
+                    <td>@Html.DisplayFor(x => x.UploadDateTime[i])</td>
+                    <td>@Html.DisplayFor(x => x.DataSourceType[i])</td>
+                    <td>@Html.ActionLink("View Notifications", "ViewNotifications", new { dataSourceID = Model.DataSourceID[i], dataSourceName = Model.DataSourceName[i] })</td>
+                    <td>@Html.ActionLink("View PNRs", "ViewExtracts", new { dataSourceID = Model.DataSourceID[i], dataSourceName = Model.DataSourceName[i] })</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+}

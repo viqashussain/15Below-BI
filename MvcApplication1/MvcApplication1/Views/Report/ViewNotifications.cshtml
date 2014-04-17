@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Notifications";
+}
+@model MvcApplication1.Models.NotificationsReportModel
+<!DOCTYPE html>
+
+@if (Model.NotificationID.Count == 0)
+{<p>No Notifications to Display</p>}
+else if (Model == null)
+{<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else
+{
+    //if the model is empty
+    <html>
+    <head>
+        <title>@ViewBag.Title</title>
+    </head>
+        <h2>Notifications</h2>
+    <body>
+        @using (Html.BeginForm("Search", "Report"))
+        {
+            <p>
+                Notification Name
+        <input type="text" name="notificationdesc" id="notificationSearchtxtbox" placeholder="Notification Name" />
+                <input type="submit" value="Update" />
+            </p>
+        }
+
+        @using (Html.BeginForm("ExportNotifications", "Report", new { DataSourceName = Model.DataSourceName, PNR = Model.PNR, DataSourceID = Model.DataSourceID }))
+        {
+            <input type="submit" value="Export to CSV" />
+        }
+        @{if (Model.DataSourceName != "")
+          {
+            <p>Notifications for Data Source: @Model.DataSourceName</p>
+          }
+          else if (Model.PNR != "")
+          {
+            <p>Notifications for PNR: @Model.PNR</p>
+          }
+          else
+          {
+            <p>Displaying Recent Notifications</p>
+          }
+        }
+        <div id="DisplayData">
+            <table class="bordered">
+                <tr>
+                    <th>Notification Description</th>
+                    <th>Send Date Time</th>
+                    <th>Number of Recipients</th>
+                    <th>Language Type</th>
+                    <th>View Recipients</th>
+                    <th>View Data Source</th>
+                </tr>
+                @for (int i = 0; i < Model.NotificationID.Count; i++)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(x => x.NotificationDescription[i])</td>
+                        <td>@Html.DisplayFor(x => x.SendDateTime[i])</td>
+                        <td>@Html.DisplayFor(x => x.RecipientCount[i])</td>
+                        <td>@Html.DisplayFor(x => x.LanguageType[i])</td>
+                        <td>@Html.ActionLink("View Recipients", "ViewRecipients", new { notificationID = Model.NotificationID[i], notificationDesc = Model.NotificationDescription[0] })</td>
+                        <td>@Html.ActionLink("View Data Source", "ViewDataSources", new { notificationID = Model.NotificationID[i], notificationDesc = Model.NotificationDescription[0] })</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+    </html>
+}

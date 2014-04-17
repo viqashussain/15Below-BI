@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "15Below Reporting";
+}
+
+<h2>@ViewBag.Message</h2>
+<body>
+    <p>
+        Please either search for a Notification, PNR, Email Address or Phone Number or Data Source Name, or select a report to view which will display the top 10 results
+    </p>
+
+    @using (Html.BeginForm("Search", "Report"))
+    {
+        <div>
+            <p>Notification Name</p>
+        <input type="text" name="notificationdesc" id="notificationSearchtxtbox" placeholder="Notification Name" />
+            <input type="submit" value="Search" />
+            <p>PNR</p>
+        <input type="text" name="pnr" id="pnrtxtbox" placeholder="PNR" />
+            <input type="submit" value="Search" />
+            <p>Sent To</p>
+        <input type="text" name="sentto" id="sentTotxtbox" placeholder="Sent To" />
+            <input type="submit" value="Search" />
+            <p>Data Source Name</p>
+        <input type="text" name="datasourcename" id="datasourcetxtbox" placeholder="Data Source Name" />
+            <input type="submit" value="Search" />
+        </div>
+    }
+
+</body>

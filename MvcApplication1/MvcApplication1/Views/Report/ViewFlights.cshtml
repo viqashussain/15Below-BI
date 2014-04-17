@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Flights";
+}
+@model MvcApplication1.Models.FlightsModel
+<!DOCTYPE html>
+
+@if (Model.FlightID.Count == 0) {<p>No Flights to Display</p>} 
+else if (Model == null) {<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else {
+//if the model is empty
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+    <h2>Flights</h2>
+<body>
+    <p>
+        Flights for PNR @Model.PNR
+    </p>
+    <div id="DisplayData">
+        <table class="bordered">
+            <tr>
+                <th>Flight Code</th>
+                <th>Flight Number</th>
+                <th>Flight Leg</th>
+                <th>Departure Date</th>
+                <th>Departure Time</th>
+                <th>Departure Country</th>
+                <th>Departure City</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
+                <th>Arrival Country</th>
+                <th>Arrival City</th>
+                <th>Schedule Change</th>
+                <th>Service Class</th>
+                <th>Duration</th>
+            </tr>
+
+            @for (int i = 0; i < Model.FlightID.Count; i++)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(x => x.FlightCode[i])</td>
+                    <td>@Html.DisplayFor(x => x.FlightNumber[i])</td>
+                    <td>@Html.DisplayFor(x => x.FlightLeg[i])</td>
+                    <td>@Html.DisplayFor(x => x.DepartureDate[i])</td>
+                    <td>@Html.DisplayFor(x => x.DepartureTime[i])</td>
+                    <td>@Html.DisplayFor(x => x.DepartureCountry[i])</td>
+                    <td>@Html.DisplayFor(x => x.DepartureCity[i])</td>
+                    <td>@Html.DisplayFor(x => x.ArrivalCountry[i])</td>
+                    <td>@Html.DisplayFor(x => x.ArrivalCity[i])</td>
+                    <td>@Html.DisplayFor(x => x.ScheduleChange[i])</td>
+                    <td>@Html.DisplayFor(x => x.ServiceClass[i])</td>
+                    <td>@Html.DisplayFor(x => x.Duration[i])</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+}

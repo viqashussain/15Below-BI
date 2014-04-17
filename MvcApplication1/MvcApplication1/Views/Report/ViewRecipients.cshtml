@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Recipients";
+}
+@model MvcApplication1.Models.RecipientModel
+<!DOCTYPE html>
+
+@if (Model.RecipientID.Count == 0)
+{<p>No Recipients to Display</p>}
+else if (Model == null)
+{<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else
+{
+    //if the model is empty
+    <html>
+    <head>
+        <title>@ViewBag.Title</title>
+    </head>
+        <h2>Recipients</h2>
+    <body>
+        @using (Html.BeginForm("Search", "Report"))
+        {
+            <p>
+                Search Sent To
+        <input type="text" name="sentto" id="senttotxtbox" placeholder="Sent To" />
+                <input type="submit" value="Update" />
+            </p>
+        }
+        @using (Html.BeginForm("ExportRecipients", "Report", new { extractID = Model.ExtractID, PNR = Model.PNR, NotificationID = Model.NotificationID, notificationDesc = Model.NotificationName }))
+        {
+            <input type="submit" value="Export to CSV" />
+        }
+        @{if (Model.NotificationName != "")
+          {
+            <p>Recipients for Notification: @Model.NotificationName</p>
+          }
+          else if (Model.PNR != "")
+          {
+            <p>Recipients for PNR: @Model.PNR</p>
+          }
+          else
+          {
+            <p>Displaying Recent Recipients</p>
+          }
+        }
+        <div id="DisplayData">
+            <table class="bordered">
+                <tr>
+                    <th>Sent To</th>
+                    <th>Send Date Time</th>
+                    <th>Send Type</th>
+                    <th>Template Name</th>
+                    <th>View PNR</th>
+                    <th>View Notification</th>
+                </tr>
+                @for (int i = 0; i < Model.RecipientID.Count; i++)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(x => x.SentTo[i])</td>
+                        <td>@Html.DisplayFor(x => x.SendDateTime[i])</td>
+                        <td>@Html.DisplayFor(x => x.NotificationType[i])</td>
+                        <td>@Html.DisplayFor(x => x.TemplateName[i])</td>
+                        <td>@Html.ActionLink("View PNR", "ViewExtracts", new { recipientID = Model.RecipientID[i] })</td>
+                        <td>@Html.ActionLink("View Notification", "ViewNotifications", new { recipientID = Model.RecipientID[i], pnr = Model.PNR })</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+    </html>
+}
