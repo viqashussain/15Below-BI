@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "OLAP2603", "OLAP2603\OLAP2603.dwproj", "{39F98E5A-BF86-4212-83C8-FBA5E18DBD34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39F98E5A-BF86-4212-83C8-FBA5E18DBD34}.Development|Default.ActiveCfg = Development
+		{39F98E5A-BF86-4212-83C8-FBA5E18DBD34}.Development|Default.Build.0 = Development
+		{39F98E5A-BF86-4212-83C8-FBA5E18DBD34}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

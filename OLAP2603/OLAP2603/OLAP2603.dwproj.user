@@ -1,0 +1,31 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Data Warehouse</Id>
+            <Name>Data Warehouse</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswEW3M6zfkCDQSNcL8+F2AAAAAAeAAAARABhAHQAYQAgAFcAYQByAGUAaABvAHUAcwBlAAAAEGYAAAABAAAgAAAA+iySfxXkVu0WavN4yt/p/GEb25/FOrWzJZiTrEr+/9oAAAAADoAAAAACAAAgAAAAUlUTXbL0ogUXdXD/ssTQ8eORiJ8mZ0euj7V5Pkovo8oQAAAATUGgRLYAxwek0MyTdCuho0AAAAAJd1eVR1jX/KPoiSRiromlKkR/7wbYhqPHRvaMsXOMj/I9wCowDnq/+ZXnXI9u2MqW/BwQKXYqvLJfSF53eXs1</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Data Warehouse</Id>
+            <Name>Data Warehouse</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswEW3M6zfkCDQSNcL8+F2AAAAAAeAAAARABhAHQAYQAgAFcAYQByAGUAaABvAHUAcwBlAAAAEGYAAAABAAAgAAAAVSI18P28yA88qjRAUGUeR9chE9U7nlAvalGem+fXVrkAAAAADoAAAAACAAAgAAAAKAUw2Uh95WVhMGMAkHvivfF754C2sWlR2bPS+V+lzTEQAAAAyRrL/ynpt4msThW5GtNY2UAAAAAWHaiZ9/iPzsFlkjGjDbNC9gnbyIlpK3enplU+dddVBuHpj33y9I5yKM39o1IeYO2VDuz3qrptJW3BwC2DNTjs</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>VIQAS-HP\DW</TargetServer>
+        <TargetDatabase>OLAP</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+        <ProcessingOption>Full</ProcessingOption>
+        <DeploymentMode>DeployAll</DeploymentMode>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

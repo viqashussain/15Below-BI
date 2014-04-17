@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>OLAP</Database>
+    <Server>VIQAS-HP\DW</Server>
+    <ConnectionString>DataSource=VIQAS-HP\DW;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Full</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>8zphqa0Sn8y8zHnEUMN/z1+yMOw=26/03/2014 21:59:1026/03/2014 21:59:10</TimeStamp>
+        <ID>
+          <String>Data Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>DuqTDAua2JAx/aU892O9r/Klolc=08/04/2014 16:05:3526/03/2014 22:05:35</TimeStamp>
+        <ID>
+          <String>Data Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>MFDYMkuQxo/makROY7ppVva5+9c=27/03/2014 19:36:0226/03/2014 22:06:36</TimeStamp>
+        <ID>
+          <String>Recipients Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>R80T2EDrDfMJ96ic3VqKiDy9V8s=26/03/2014 22:27:4126/03/2014 22:06:36</TimeStamp>
+        <ID>
+          <String>Templates Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Om/wH2xa79C3Q+LX7QIs+k/fSyU=26/03/2014 22:27:5026/03/2014 22:06:36</TimeStamp>
+        <ID>
+          <String>Extracts Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Tur4wWgjjqNC/OmI37y0ZFsERSs=26/03/2014 22:16:5026/03/2014 22:06:36</TimeStamp>
+        <ID>
+          <String>Notifications Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>e+AiYul8/Iecu3HpykC4peP1OTM=26/03/2014 22:29:4026/03/2014 22:06:36</TimeStamp>
+        <ID>
+          <String>Data Source Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7rVIkdds5/O7B14IKP4RLS+u7Ns=09/04/2014 12:55:5308/04/2014 15:38:04</TimeStamp>
+        <ID>
+          <String>Flights Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>/GMDG0mcjG9jwouuFSDjHC9T3f0=08/04/2014 18:05:4908/04/2014 15:38:21</TimeStamp>
+        <ID>
+          <String>Pax Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>6nJl5HFYZbKakjmVertr14IuDag=09/04/2014 13:00:3026/03/2014 22:06:36GeX8v/nPlveGURSHkI8X3AHnJfU=08/04/2014 18:10:4626/03/2014 22:06:36</TimeStamp>
+        <ID>
+          <String>Data Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>arwggDEN7Bs0zkhOD9pb/qOVrnI=26/03/2014 21:58:1526/03/2014 21:58:14</TimeStamp>
+      <ID>
+        <String>OLAP</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2014-04-09T12:16:04.213333Z</LastDeployed>
+</DeploymentSnapshot>

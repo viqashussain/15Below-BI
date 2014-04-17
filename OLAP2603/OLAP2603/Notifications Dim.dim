@@ -1,0 +1,186 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="552b2a5e-9150-454b-9902-e0ab2ecedd94" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Notifications Dim</ID>
+  <Name>Notifications Dim</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1475" scrolltop="-4127" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7091" y="11827" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="NotificationsDim" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4101" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="0008000005100000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_NotificationsDim" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1475</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4127</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="91a14961-75a7-4d04-8ec8-89049a4dfb71">
+    <DataSourceViewID>Data Warehouse</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="cada2f5f-69a0-4110-8ecb-c3b05b8654f6">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="cff77c13-3991-4f80-870e-2dd6e2cbf621">
+      <ID>Notification ID</ID>
+      <Name>Notification ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bcadc9f1-1807-4f96-80e4-92fbbbe2f4bb">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2030382-c7dc-4074-8eea-0a870dfbe5d3">
+            <TableID>dbo_NotificationsDim</TableID>
+            <ColumnID>NotificationID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="07353edc-5e60-4538-9166-e15bfc1738c9">
+          <AttributeID>Notification Desc</AttributeID>
+          <Name>Notification Desc</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ef5c422b-0f05-411e-9ed7-94e582bacecb">
+          <AttributeID>Language Type</AttributeID>
+          <Name>Language Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="562db413-f627-4282-9567-eb9724ae7a23">
+          <AttributeID>Send Date</AttributeID>
+          <Name>Send Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ac3352ba-2399-47fc-a478-60c0fba49d32">
+      <ID>Notification Desc</ID>
+      <Name>Notification Desc</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5d386f64-129c-4ffe-a02e-286de80e0903">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="12a41904-cecc-4326-8642-0dc176d3fb85">
+            <TableID>dbo_NotificationsDim</TableID>
+            <ColumnID>NotificationDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="815ea37a-713a-40e0-a816-730d18a62f4a">
+      <ID>Language Type</ID>
+      <Name>Language Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a8e2549-3b52-47ef-8737-3393bc94f8cd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4f66909e-a4a4-47f1-970f-451b128481e9">
+            <TableID>dbo_NotificationsDim</TableID>
+            <ColumnID>LanguageType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f91dd58c-2a3c-485d-ac4e-1a1b8bd387bc">
+      <ID>Send Date</ID>
+      <Name>Send Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aad6fe25-fc9f-4eb9-a473-f0612b70e8f3">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e25a680b-4959-4c74-8886-093805d7c9ba">
+            <TableID>dbo_NotificationsDim</TableID>
+            <ColumnID>SendDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="5efff99f-2553-49bd-a70a-d8adff7de7bb">
+      <ID>Hierarchy</ID>
+      <Name>NotificationsH1</Name>
+      <Levels>
+        <Level dwd:design-time-name="e361690d-50c4-4e8f-9874-7cf07c0dbe5f">
+          <ID>Notification ID</ID>
+          <Name>Notification ID</Name>
+          <SourceAttributeID>Notification ID</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="84923591-866c-4e01-b7ce-ef7b0b236836">
+          <ID>Notification Desc</ID>
+          <Name>Notification Desc</Name>
+          <SourceAttributeID>Notification Desc</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b5d4e2bd-7027-4940-a091-341228cf3707">
+          <ID>Send Date</ID>
+          <Name>Send Date</Name>
+          <SourceAttributeID>Send Date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
