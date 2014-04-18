@@ -8,18 +8,12 @@ namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
+        /// <summary>
+        ///  Method for the Home Page
+        /// </summary>
+        /// <returns>
+        /// View - Home Page
+        /// </returns>
         public ActionResult SelectReport()
         {
             ViewBag.Message = "15Below Reporting";
