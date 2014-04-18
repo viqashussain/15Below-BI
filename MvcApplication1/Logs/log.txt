@@ -29965,3 +29965,13 @@
 2014-04-10 22:44:05,520 [10968] INFO  MvcApplication1.Controllers.ReportController In ViewRecipients
 2014-04-10 22:44:05,564 [10968] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
 2014-04-10 22:44:06,102 [10968] DEBUG MvcApplication1.Controllers.ReportController Get Recipients by top 10
+2014-04-18 12:28:59,099 [8980] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-18 12:28:59,128 [8980] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-18 12:28:59,129 [8980] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-18 12:28:59,141 [8980] DEBUG MvcApplication1.Controllers.ReportController Get Notifications by top 10
+2014-04-18 12:28:59,172 [8980] ERROR MvcApplication1.Controllers.ReportController ERROR when trying to read recrods
+2014-04-18 12:28:59,172 [8980] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: Either the user, 15BELOW\Viqas.Hussain, does not have access to the OLAP database, or the database does not exist.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteTabular(CommandBehavior behavior, ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 327

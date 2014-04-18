@@ -25,14 +25,29 @@ namespace MvcApplication1.Controllers
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger
     (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        //
-        // GET: /Report/
 
-        public ActionResult ViewReport()
-        {
-            return View();
-        }
-
+        /// <summary>
+        ///  Method that is called when viewing recipients, or when going from 
+        ///  one view to the recipients View. 
+        /// </summary>
+        /// <returns>
+        /// The Recipients View and the Recipients Model
+        /// </returns>
+        /// <param name="extractID">
+        /// The ExtractID for which to retrieve the Recipients for
+        /// </param>
+        /// <param name="notificationDesc">
+        /// Required so it can be added to the Recipients Model to be displayed in the View
+        /// </param>
+        /// <param name="notificationID">
+        /// The NotificationID for which to retrieve the Recipients for
+        /// </param>
+        /// <param name="pnr">
+        /// Required so it can be added to the Recipients Model to be displayed in the View
+        /// </param>
+        /// <param name="sentTo">
+        /// The SentTo for which to retrieve the Recipients for
+        /// </param>
         public ActionResult ViewRecipients(int notificationID = 0, int extractID = 0, string sentTo = "", string notificationDesc = "", string pnr = "")
         {
             log.Info("In ViewRecipients");
@@ -44,6 +59,21 @@ namespace MvcApplication1.Controllers
             return View("ViewRecipients", recipientModel);
         }
 
+        /// <summary>
+        ///  Method that is called when viewing Flights for a PNR
+        /// </summary>
+        /// <returns>
+        /// The Flights View and the Flights Model
+        /// </returns>
+        /// <param name="extractID">
+        /// The ExtractID for which to retrieve the Flights for
+        /// </param>
+        /// <param name="flightID">
+        /// The FlightID for which to retrieve the Flights for
+        /// </param>
+        /// <param name="pnr">
+        /// Required so the PNR can be added to the Flights Model to be displayed in the View
+        /// </param>
         public ActionResult ViewFlights(int flightID = 0, int extractID = 0, string pnr = "")
         {
             log.Info("In ViewFlights");
@@ -52,6 +82,21 @@ namespace MvcApplication1.Controllers
             return View("ViewFlights", flightsModel);
         }
 
+        /// <summary>
+        ///  Method that is called when viewing Passengers for a PNR
+        /// </summary>
+        /// <returns>
+        /// The Passengers View and the Passengerss Model
+        /// </returns>
+        /// <param name="extractID">
+        /// The ExtractID for which to retrieve the Passengers for
+        /// </param>
+        /// <param name="paxID">
+        /// The PaxID for which to retrieve the Passengers for
+        /// </param>
+        /// <param name="pnr">
+        /// Required so the PNR can be added to the Passengers Model to be displayed in the View
+        /// </param>
         public ActionResult ViewPax(int paxID = 0, int extractID = 0, string pnr = "")
         {
             log.Info("In ViewPax");
@@ -60,6 +105,35 @@ namespace MvcApplication1.Controllers
             return View("ViewPax", paxModel);
         }
 
+        /// <summary>
+        ///  Method that is called when viewing Notifications, or when going from 
+        ///  one view to the Notifications View. 
+        /// </summary>
+        /// <returns>
+        /// The Passengers View and the Passengers Model
+        /// </returns>
+        /// <param name="dataSourceID">
+        /// The DataSourceID for which to retrieve the Notifications for
+        /// </param>
+        /// <param name="dataSourceName">
+        /// Required so the Data Source Name can be added to the Notifications Model to be displayed in the View
+        /// </param>
+        /// <param name="extractID">
+        /// The ExtractID for which to retrieve the Notifications for
+        /// </param>
+        /// <param name="notificationDesc">
+        /// Required so the Notification Desc (can be search text) can be added to the Notifications
+        /// Model to be displayed in the View
+        /// </param>
+        /// <param name="notificationID">
+        /// The NotificationID for which to retrieve the Notifications for
+        /// </param>
+        /// <param name="pnr">
+        /// Required so the PNR can be added to the Notifications Model to be displayed in the View
+        /// </param>
+        /// <param name="recipientID">
+        /// The RecipientID for which to retrieve the Notifications for
+        /// </param>
         public ActionResult ViewNotifications(int notificationID = 0, int dataSourceID = 0, string notificationDesc = "", int recipientID = 0, int extractID = 0, string dataSourceName = "", string pnr = "")
         {
             //get notifications by notification ID
@@ -72,6 +146,22 @@ namespace MvcApplication1.Controllers
             return View("ViewNotifications", notificationsModel);
         }
 
+        /// <summary>
+        ///  Method that is called when viewing PNRs, or when going from 
+        ///  one view to the PNRs View. 
+        /// </summary>
+        /// <returns>
+        /// The PNRs View and the Extracts Model
+        /// </returns>
+        /// <param name="dataSourceID">
+        /// The DataSourceID for which to retrieve the Extracts for
+        /// </param>
+        /// <param name="dataSourceName">
+        /// Required so the Data Source Name can be added to the Extracts Model and displayed in the View
+        /// </param>
+        /// <param name="recipientID">
+        /// The RecipientID for which to retrieve the Extracts for
+        /// </param>
         public ActionResult ViewExtracts(int dataSourceID = 0, int recipientID = 0, string dataSourceName = "")
         {
             log.Info("In ViewExtracts");
@@ -83,6 +173,28 @@ namespace MvcApplication1.Controllers
             return View("ViewExtracts", extractsModel);
         }
 
+        /// <summary>
+        ///  Method that is called when viewing Data Sources, or when going from 
+        ///  one view to the Data Sources View. 
+        /// </summary>
+        /// <returns>
+        /// The Data Sources View and the DataSources Model
+        /// </returns>
+        /// <param name="datasourcename">
+        /// The Data Source Name for which to retrieve the Data Source for
+        /// </param>
+        /// <param name="extractID">
+        /// The ExtractID for which to retieve the Data Source for
+        /// </param>
+        /// <param name="notificationDesc">
+        /// Required so the Notification Desc can be added to the Data Sources Model and displayed in the View
+        /// </param>
+        /// <param name="notificationID">
+        /// The NotificationID for which to retieve the Data Sources for
+        /// </param>
+        /// <param name="pnr">
+        /// Required so the PNR can be added to the Data Sources Model and displayed in the View
+        /// </param>
         public ActionResult ViewDataSources(int notificationID = 0, int extractID = 0, string datasourcename = "", string notificationDesc = "", string pnr = "")
         {
             log.Info("In ViewDataSources");
@@ -92,6 +204,29 @@ namespace MvcApplication1.Controllers
             return View("ViewDataSources", dataSourcesModel);
         }
 
+        /// <summary>
+        ///  Method that is called when any of the search functions are called.
+        ///  Search can be either by Notification Description, PNR, SentTo and Data Source Name
+        /// </summary>
+        /// <returns>
+        ///  Either:
+        ///     The Notifications View and Notifications Model
+        ///     The PNRs View and the Extracts Model
+        ///     The Recipients View and the Recipients Model
+        ///     The Data Sources View and the Data Sources Model
+        /// </returns>
+        /// <param name="datasourcename">
+        /// The Data Source Name search text
+        /// </param>
+        /// <param name="notificationdesc">
+        /// The Notification Description search text
+        /// </param>
+        /// <param name="pnr">
+        /// The PNR search text
+        /// </param>
+        /// <param name="sentto">
+        /// The Sent To search text
+        /// </param>
         [ValidateInput(false)]
         public ActionResult Search(string notificationdesc = "", string pnr = "", string sentto = "", string datasourcename = "")
         {
@@ -133,7 +268,29 @@ namespace MvcApplication1.Controllers
         }
 
 
-        //make connection to SSAS and get back some data
+        /// <summary>
+        ///  Method that is called to retrieve Notifications data from the OLAP DB. Method
+        ///  will put data into the Notifications Report Model. The retrieve criteria depends on the
+        ///  parameters provided, and there is an order of priority within the 'IF' statements.
+        /// </summary>
+        /// <returns>
+        ///  NotificationsReportModel or null if a connection cannot be made to the OLAP DB.
+        /// </returns>
+        /// <param name="dataSourceID">
+        /// The DataSourceID to retrieve the Notifications for
+        /// </param>
+        /// <param name="extractID">
+        /// The ExtractID to retrieve the Notifications for
+        /// </param>
+        /// <param name="notificationDesc">
+        /// The Notification Description to retrieve the notifications for
+        /// </param>
+        /// <param name="notificationID">
+        /// The NotificationID to retrieve the Notifications for
+        /// </param>
+        /// <param name="recipientID">
+        /// The RecipientID to retrieve the Notifications for
+        /// </param>
         public NotificationsReportModel NotificationsReport(int notificationID = 0, int dataSourceID = 0, string notificationDesc = "", int recipientID = 0, int extractID = 0)
         {
             NotificationsReportModel model = new NotificationsReportModel();
@@ -235,7 +392,7 @@ namespace MvcApplication1.Controllers
                         }
                         catch (AdomdErrorResponseException ex)
                         {
-                            log.Error("ERROR when trying to read recrods");
+                            log.Error("ERROR when trying to read records");
                             log.Error(ex);
                         }
                     }
@@ -249,6 +406,26 @@ namespace MvcApplication1.Controllers
             return model;
         }
 
+        /// <summary>
+        ///  Method that is called to retrieve Recipients data from the OLAP DB. Method
+        ///  will put data into the Recipients Report Model. The retrieve criteria depends on the
+        ///  parameters provided, and there is an order of priority within the 'IF' statements.
+        /// </summary>
+        /// <returns>
+        ///  RecipientModel or null if a connection cannot be made to the OLAP DB.
+        /// </returns>
+        /// <param name="export">
+        /// Whether the data is for an Export or not (so all data is retrieved instead of top 10)
+        /// </param>
+        /// <param name="extractID">
+        /// The ExtractID to retrieve the Recipients for
+        /// </param>
+        /// <param name="notificationID">
+        /// The NotificationID to retrieve the Recipients for
+        /// </param>
+        /// <param name="sentTo">
+        /// The SentTo to retrieve the Recipients for
+        /// </param>
         public RecipientModel RecipientsReport(int notificationID = 0, int extractID = 0, string sentTo = "", bool export = false)
         {
             RecipientModel model = new RecipientModel();
@@ -366,6 +543,26 @@ namespace MvcApplication1.Controllers
             return model;
         }
 
+        /// <summary>
+        ///  Method that is called to retrieve Extracts data from the OLAP DB. Method
+        ///  will put data into the Extracts Report Model. The retrieve criteria depends on the
+        ///  parameters provided, and there is an order of priority within the 'IF' statements.
+        /// </summary>
+        /// <returns>
+        ///  ExtractsModel or null if a connection cannot be made to the OLAP DB.
+        /// </returns>
+        /// <param name="export">
+        /// Whether the data is for an Export or not (so all data is retrieved instead of top 10)
+        /// </param>
+        /// <param name="dataSourceID">
+        /// The DataSourceID to retrieve the Extracts for
+        /// </param>
+        /// <param name="pnr">
+        /// The PNR to retrieve the Extracts for
+        /// </param>
+        /// <param name="recipientID">
+        /// The RecipientID to retrieve the Extracts for
+        /// </param>
         public ExtractsModel ExtractsReport(int dataSourceID = 0, int recipientID = 0, string pnr = "", bool export = false)
         {
             ExtractsModel model = new ExtractsModel();
@@ -503,6 +700,23 @@ namespace MvcApplication1.Controllers
             return model;
         }
 
+        /// <summary>
+        ///  Method that is called to retrieve Data Sources data from the OLAP DB. Method
+        ///  will put data into the Data Sources Report Model. The retrieve criteria depends on the
+        ///  parameters provided, and there is an order of priority within the 'IF' statements.
+        /// </summary>
+        /// <returns>
+        ///  DataSourcesModel or null if a connection cannot be made to the OLAP DB.
+        /// </returns>
+        /// <param name="datasourcename">
+        /// The Data Source Name to retrieve the Data Sources for
+        /// </param>
+        /// <param name="extractID">
+        /// The ExtractID to retrive the Data Sources for
+        /// </param>
+        /// <param name="notificationID">
+        /// The NotificationID to retrieve the Data Sources for
+        /// </param>
         public DataSourcesModel DataSourcesReport(int notificationID = 0, string datasourcename = "", int extractID = 0)
         {
             DataSourcesModel model = new DataSourcesModel();
@@ -606,6 +820,20 @@ namespace MvcApplication1.Controllers
             return model;
         }
 
+        /// <summary>
+        ///  Method that is called to retrieve Flights data from the OLAP DB. Method
+        ///  will put data into the Flights Report Model. The retrieve criteria depends on the
+        ///  parameters provided, and there is an order of priority within the 'IF' statements.
+        /// </summary>
+        /// <returns>
+        ///  FlightsModel or null if a connection cannot be made to the OLAP DB.
+        /// </returns>
+        /// <param name="extractID">
+        /// The ExtractID to retrieve the Flights for
+        /// </param>
+        /// <param name="flightID">
+        /// The FlightID to retrieve the Flights for
+        /// </param>
         public FlightsModel FlightsReport(int flightID = 0, int extractID = 0)
         {
             FlightsModel model = new FlightsModel();
@@ -730,6 +958,20 @@ namespace MvcApplication1.Controllers
             return model;
         }
 
+        /// <summary>
+        ///  Method that is called to retrieve Passengers data from the OLAP DB. Method
+        ///  will put data into the Passengers Report Model. The retrieve criteria depends on the
+        ///  parameters provided, and there is an order of priority within the 'IF' statements.
+        /// </summary>
+        /// <returns>
+        ///  PaxModel or null if a connection cannot be made to the OLAP DB.
+        /// </returns>
+        /// <param name="extractID">
+        /// The ExtractID to retrieve the PAX' for
+        /// </param>
+        /// <param name="PaxID">
+        /// The PaxID to retrieve the Passengers for
+        /// </param>
         public PaxModel PaxReport(int PaxID = 0, int extractID = 0)
         {
             PaxModel model = new PaxModel();
