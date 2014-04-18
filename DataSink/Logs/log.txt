@@ -11050,3 +11050,40 @@ ClientConnectionId:a7d9839b-b308-48c8-829b-af3f4e855c3c
 2014-04-13 22:26:29,361 [7828] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
 2014-04-13 22:26:29,361 [7828] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
 2014-04-13 22:26:29,376 [7828] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-18 12:59:29,352 [9776] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-18 12:59:29,370 [9776] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-18 12:59:29,371 [9776] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-18 12:59:29,653 [9776] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-18 12:59:29,693 [9776] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-18 13:10:49,425 [9504] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-18 13:10:49,439 [9504] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-18 13:10:49,440 [9504] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-18 13:10:49,472 [9504] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-18 13:10:49,473 [9504] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-18 13:13:07,229 [7984] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-18 13:13:07,242 [7984] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-18 13:13:07,243 [7984] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-18 13:13:07,289 [7984] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-18 13:13:07,289 [7984] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-18 13:13:07,290 [7984] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-18 13:13:07,291 [7984] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-18 13:13:07,789 [7984] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-18 13:13:07,789 [7984] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-18 13:13:07,791 [7984] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-18 13:13:07,791 [7984] INFO  DataSinkApp.Program EXTRACT Process took: -00:00:00.5560556 to complete
+2014-04-18 13:13:07,792 [7984] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-18 13:13:07,792 [7984] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-18 13:13:07,913 [7984] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-18 13:13:07,913 [7984] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-18 13:13:08,145 [7984] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-18 13:13:08,145 [7984] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-18 13:13:08,145 [7984] INFO  DataSinkApp.Program TRANSFORM Process took: -00:00:00.3540354 to complete
+2014-04-18 13:13:08,146 [7984] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-18 13:13:08,146 [7984] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-18 13:13:08,194 [7984] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-18 13:13:08,194 [7984] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Program LOAD Process took: -00:00:00.0560056 to complete
+2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Program Process Cube took: 00:00:00 to complete
+2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Program Data Sink Application Stopped

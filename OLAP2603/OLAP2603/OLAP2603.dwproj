@@ -68,7 +68,7 @@
           <ConfigurationSetting>
             <Id>Data Warehouse</Id>
             <Name>Data Warehouse</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=VIQAS-HP\DW;Persist Security Info=True;Password=;User ID=;Initial Catalog=DataWarehouse</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=GOLD\DW;Persist Security Info=True;Password=;User ID=;Initial Catalog=DataWarehouse</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

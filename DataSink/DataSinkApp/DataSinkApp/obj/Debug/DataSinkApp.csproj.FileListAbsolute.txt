@@ -54,3 +54,7 @@ C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp
 C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\DataSinkApp.XML
 C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\obj\Debug\DataSinkApp.exe
 C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\obj\Debug\DataSinkApp.pdb
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\DataSinkApp.exe
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\DataSinkApp.pdb
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\log4net.dll
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\obj\Debug\DataSinkApp.csprojResolveAssemblyReference.cache

@@ -3,7 +3,7 @@
   <Name>Data Warehouse</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-  <ConnectionString>Provider=SQLNCLI11.1;Data Source=VIQAS-HP\DW;Persist Security Info=True;Password=;User ID=;Initial Catalog=DataWarehouse</ConnectionString>
+  <ConnectionString>Provider=SQLNCLI11.1;Data Source=GOLD\DW;Persist Security Info=True;Password=;User ID=;Initial Catalog=DataWarehouse</ConnectionString>
   <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
   <ImpersonationInfo>
     <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>

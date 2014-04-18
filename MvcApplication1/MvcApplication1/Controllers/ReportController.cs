@@ -1069,12 +1069,44 @@ namespace MvcApplication1.Controllers
             return model;
         }
 
+        /// <summary>
+        ///  Method that is called from the View when the CSV button is selected on the Notifications View.
+        ///  This method will call the method NotificationsToCsv which will carry out all the tasks
+        ///  for creating the Export file. 
+        /// </summary>
+        /// <param name="DataSourceID">
+        /// Create Export by DataSourceID
+        /// </param>
+        /// <param name="DataSourceName">
+        /// Data Source Name required to name the Export file.
+        /// </param>
+        /// <param name="extractID">
+        /// Create Export by ExtractID
+        /// </param>
+        /// <param name="PNR">
+        /// PNR required to name the Export file.
+        /// </param>
         public void ExportNotifications(string DataSourceName = "", string PNR = "", int DataSourceID = 0, int extractID = 0)
         {
             log.Info("In EXPORT Notifications");
             NotificationsToCsv(DataSourceName, PNR, DataSourceID, extractID);
         }
 
+        /// <summary>
+        ///  Method is responsible for retrieving and creating the CSV file for Notifications.
+        /// </summary>
+        /// <param name="DataSourceID">
+        /// Create Export by DataSourceID
+        /// </param>
+        /// <param name="DataSourceName">
+        ///  Data Source Name required to name the Export file.
+        /// </param>
+        /// <param name="extractID">
+        /// Create Export by ExtractID
+        /// </param>
+        /// <param name="PNR">
+        /// PNR required to name the Export file.
+        /// </param>
         public void NotificationsToCsv(string DataSourceName = "", string PNR = "", int DataSourceID = 0, int extractID = 0)
         {
             string filename = "";
@@ -1119,12 +1151,44 @@ namespace MvcApplication1.Controllers
             }
         }
 
+        /// <summary>
+        ///  Method that is called from the View when the CSV button is selected on the Recipients View.
+        ///  This method will call the method RecipientsToCSV which will carry out all the tasks
+        ///  for creating the Export file. 
+        /// </summary>
+        /// <param name="extractID">
+        /// Create Export by ExtractID
+        /// </param>
+        /// <param name="PNR">
+        /// PNR required to name the Export file.
+        /// </param>
+        /// <param name="notificationDesc">
+        /// Notification Description required to name the Export file
+        /// </param>
+        /// <param name="NotificationID">
+        /// Create Export by NotificationID
+        /// </param>
         public void ExportRecipients(string notificationDesc = "", string PNR = "", int NotificationID = 0, int extractID = 0)
         {
             log.Info("In EXPORT Recipients");
             RecipientsToCSV(notificationDesc, PNR, NotificationID, extractID);
         }
 
+        /// <summary>
+        ///  Method is responsible for retrieving and creating the CSV file for Recipients.
+        /// </summary>
+        /// <param name="extractID">
+        /// Create Export by ExtractID
+        /// </param>
+        /// <param name="PNR">
+        /// PNR required to name the Export file.
+        /// </param>
+        /// <param name="notificationDesc">
+        /// Notification Description required to name the Export file
+        /// </param>
+        /// <param name="NotificationID">
+        /// Create Export by NotificationID
+        /// </param>
         public void RecipientsToCSV(string notificationDesc = "", string PNR = "", int NotificationID = 0, int extractID = 0)
         {
             string filename = "";
@@ -1169,12 +1233,50 @@ namespace MvcApplication1.Controllers
             }
         }
 
+        /// <summary>
+        ///  Method that is called from the View when the CSV button is selected on the Extracts (PNRs) View.
+        ///  This method will call the method ExtractsToCSV which will carry out all the tasks
+        ///  for creating the Export file. 
+        /// </summary>
+        /// <param name="extractID">
+        /// Create Export by ExtractID
+        /// </param>
+        /// <param name="PNR">
+        /// PNR required to name the Export file.
+        /// </param>
+        /// <param name="dataSourceID">
+        /// Create Export by DataSourceID
+        /// </param>
+        /// <param name="dataSourceName">
+        /// Data Source Name required to name the Export file.
+        /// </param>
+        /// <param name="recipientID">
+        /// Create Export by RecipientID
+        /// </param>
         public void ExportExtracts(int recipientID = 0, string PNR = "", int dataSourceID = 0, string dataSourceName = "")
         {
             log.Info("In EXPORT Extracts");
             ExtractsToCSV(dataSourceName, PNR, dataSourceID, recipientID);
         }
 
+        /// <summary>
+        ///  Method is responsible for retrieving and creating the CSV file for Recipients.
+        /// </summary>
+        /// <param name="extractID">
+        /// Create Export by ExtractID
+        /// </param>
+        /// <param name="PNR">
+        /// PNR required to name the Export file.
+        /// </param>
+        /// <param name="dataSourceID">
+        /// Create Export by DataSourceID
+        /// </param>
+        /// <param name="dataSourceName">
+        /// Data Source Name required to name the Export file.
+        /// </param>
+        /// <param name="recipientID">
+        /// Create Export by RecipientID
+        /// </param>
         public void ExtractsToCSV(string dataSourceName = "", string PNR = "", int dataSourceID = 0, int recipientID = 0)
         {
             string filename = "";

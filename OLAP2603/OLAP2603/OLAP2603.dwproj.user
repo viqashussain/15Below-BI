@@ -7,17 +7,17 @@
           <ConfigurationSetting>
             <Id>Data Warehouse</Id>
             <Name>Data Warehouse</Name>
-            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswEW3M6zfkCDQSNcL8+F2AAAAAAeAAAARABhAHQAYQAgAFcAYQByAGUAaABvAHUAcwBlAAAAEGYAAAABAAAgAAAA+iySfxXkVu0WavN4yt/p/GEb25/FOrWzJZiTrEr+/9oAAAAADoAAAAACAAAgAAAAUlUTXbL0ogUXdXD/ssTQ8eORiJ8mZ0euj7V5Pkovo8oQAAAATUGgRLYAxwek0MyTdCuho0AAAAAJd1eVR1jX/KPoiSRiromlKkR/7wbYhqPHRvaMsXOMj/I9wCowDnq/+ZXnXI9u2MqW/BwQKXYqvLJfSF53eXs1</Value>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3DgJZKc+0kqb7v6GD+yNtwAAAAAeAAAARABhAHQAYQAgAFcAYQByAGUAaABvAHUAcwBlAAAAA2YAAMAAAAAQAAAATxcIReT74tt3GEc5yD0vXwAAAAAEgAAAoAAAABAAAADYhO6Xp7gzcKlwrSBroonWEAAAAKuD29sfmcTI/2H6fQLur2QUAAAAR7/tiwTH3xFCQAp3RYjCdusyf9Y=</Value>
           </ConfigurationSetting>
         </UserIDs>
         <UserPasswords>
           <ConfigurationSetting>
             <Id>Data Warehouse</Id>
             <Name>Data Warehouse</Name>
-            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswEW3M6zfkCDQSNcL8+F2AAAAAAeAAAARABhAHQAYQAgAFcAYQByAGUAaABvAHUAcwBlAAAAEGYAAAABAAAgAAAAVSI18P28yA88qjRAUGUeR9chE9U7nlAvalGem+fXVrkAAAAADoAAAAACAAAgAAAAKAUw2Uh95WVhMGMAkHvivfF754C2sWlR2bPS+V+lzTEQAAAAyRrL/ynpt4msThW5GtNY2UAAAAAWHaiZ9/iPzsFlkjGjDbNC9gnbyIlpK3enplU+dddVBuHpj33y9I5yKM39o1IeYO2VDuz3qrptJW3BwC2DNTjs</Value>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3DgJZKc+0kqb7v6GD+yNtwAAAAAeAAAARABhAHQAYQAgAFcAYQByAGUAaABvAHUAcwBlAAAAA2YAAMAAAAAQAAAAoW5xu8eKqqlTYw1fKwIp9QAAAAAEgAAAoAAAABAAAADDs15t4L/c9oPeW2dfZMPdEAAAANtZ0CcohyS9v4MNPfP9kaMUAAAALDmHxSru23zhDp4Xwb2JUpWDaIE=</Value>
           </ConfigurationSetting>
         </UserPasswords>
-        <TargetServer>VIQAS-HP\DW</TargetServer>
+        <TargetServer>GOLD\DW</TargetServer>
         <TargetDatabase>OLAP</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>

@@ -283,6 +283,7 @@ namespace DataSinkApp.Extract
                     }
                     else
                     {
+                        dr.Read();
                         recipientID = (int)dr[0];
                     }
                     myConnection.Close();
