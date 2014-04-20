@@ -14,12 +14,11 @@ namespace UnitTests
         public void TearDown()
         {
             //Remove all data from the StagingBD
-            string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM StagingTable;DELETE FROM TemplatesDim;";
-            string connString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
-            UnitTests.DBTestMethods.CleanDB(command, connString);
+            //The Load process should take care of this so we do not need to do it
+
             //Remove all data from DataWarehouse
-            command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM TemplatesDim;";
-            connString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
+            string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM TemplatesDim;";
+            string connString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
             UnitTests.DBTestMethods.CleanDB(command, connString);
 
         }
@@ -53,7 +52,7 @@ namespace UnitTests
 
             //Assert DataSourceDim
             string command = "SELECT COUNT(0) FROM DataSourceDim";
-            string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
+            string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
             int numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
             Assert.AreEqual(48, numberOfRecords);
 
@@ -91,6 +90,53 @@ namespace UnitTests
             command = "SELECT COUNT(0) FROM TemplatesDim";
             numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
             Assert.AreEqual(2, numberOfRecords);
+
+            //StagingDB should be empty now
+            //Assert DataSourceDim
+            command = "SELECT COUNT(0) FROM DataSourceDim";
+            sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert ExtractsDim
+            command = "SELECT COUNT(0) FROM ExtractsDim";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert FactTable
+            command = "SELECT COUNT(0) FROM FactTable";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert FlightsDim
+            command = "SELECT COUNT(0) FROM FlightsDim";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert NotificationsDim
+            command = "SELECT COUNT(0) FROM NotificationsDim";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert PaxDim
+            command = "SELECT COUNT(0) FROM PaxDim";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert RecipientsDim
+            command = "SELECT COUNT(0) FROM RecipientsDim";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert TemplatesDim
+            command = "SELECT COUNT(0) FROM TemplatesDim";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
+
+            //Assert StagingTable
+            command = "SELECT COUNT(0) FROM StagingTable";
+            numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(0, numberOfRecords);
         }
     }
 }
