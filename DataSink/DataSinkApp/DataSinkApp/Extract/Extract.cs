@@ -50,14 +50,26 @@ namespace DataSinkApp.Extract
                 DateTime enddate;
                 try
                 {
-                    if (ConfigurationManager.AppSettings["RetrieveEndDate"] != "")
+                    if (testing == true)
                     {
-                        enddate = Convert.ToDateTime(ConfigurationManager.AppSettings["RetrieveEndDate"]);
+                        if (ConfigurationManager.AppSettings["RetrieveEndDateTEST"] != "")
+                        {
+                            enddate = Convert.ToDateTime(ConfigurationManager.AppSettings["RetrieveEndDateTEST"]);
+                        }
+                        else
+                        {
+                            enddate = System.DateTime.Now;
+                        }
                     }
                     else
-                    {
-                        enddate = System.DateTime.Now;
-                    }
+                        if (ConfigurationManager.AppSettings["RetrieveEndDate"] != "")
+                        {
+                            enddate = Convert.ToDateTime(ConfigurationManager.AppSettings["RetrieveEndDate"]);
+                        }
+                        else
+                        {
+                            enddate = System.DateTime.Now;
+                        }
                 }
                 catch (System.FormatException)
                 {
@@ -75,7 +87,16 @@ namespace DataSinkApp.Extract
                 SqlDataReader rdr = cmd.ExecuteReader();
                 Log.Info("Finished Executing Stored Procedure: " + sp);
                 // Initializing an SqlBulkCopy object
-                SqlBulkCopy sbc = new SqlBulkCopy(ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString);
+                string sdbConnStr = "";
+                if (testing == true)
+                {
+                    sdbConnStr = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
+                }
+                else
+                {
+                    sdbConnStr = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
+                }
+                SqlBulkCopy sbc = new SqlBulkCopy(sdbConnStr);
                 sbc.BulkCopyTimeout = 10000;
                 #region Column Mappings
 
@@ -90,7 +111,7 @@ namespace DataSinkApp.Extract
                 sbc.ColumnMappings.Add(mapID3);
                 SqlBulkCopyColumnMapping mapID4 = new SqlBulkCopyColumnMapping("notificationid", "notificationid");
                 sbc.ColumnMappings.Add(mapID4);
-                
+
                 SqlBulkCopyColumnMapping mapID5 = new SqlBulkCopyColumnMapping("paxID", "paxid");
                 sbc.ColumnMappings.Add(mapID5);
                 SqlBulkCopyColumnMapping mapID6 = new SqlBulkCopyColumnMapping("flight_legid", "flightid");
@@ -257,7 +278,7 @@ namespace DataSinkApp.Extract
                 Log.Info("Finished Extracting of Data");
             }
             return false;
-            
+
         }
 
         /// <summary>
