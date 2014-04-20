@@ -41,32 +41,41 @@ namespace DataSinkApp.Transform
             {
                 sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
             }
-
-            using (SqlConnection myConnection = new SqlConnection(sqlConnString))
+            try
             {
-                //use an sp to get the data back
-                String sp1 = "StageStagingData";
-                String sp2 = "TransformData";
-                using (SqlCommand cmd = new SqlCommand(sp1, myConnection))
+
+                using (SqlConnection myConnection = new SqlConnection(sqlConnString))
                 {
-                    cmd.CommandTimeout = 10000;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    myConnection.Open();
-                    Log.Info("Executing Stored Procedure: " + sp1);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    Log.Info("Finished Executing Stored Procedure: " + sp1);
-                    myConnection.Close();
+                    //use an sp to get the data back
+                    String sp1 = "StageStagingData";
+                    String sp2 = "TransformData";
+                    using (SqlCommand cmd = new SqlCommand(sp1, myConnection))
+                    {
+                        cmd.CommandTimeout = 10000;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        myConnection.Open();
+                        Log.Info("Executing Stored Procedure: " + sp1);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        Log.Info("Finished Executing Stored Procedure: " + sp1);
+                        myConnection.Close();
+                    }
+                    using (SqlCommand cmd = new SqlCommand(sp2, myConnection))
+                    {
+                        cmd.CommandTimeout = 10000;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        myConnection.Open();
+                        Log.Info("Executing Stored Procedure: " + sp2);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        Log.Info("Finished Executing Stored Procedure: " + sp2);
+                        myConnection.Close();
+                    }
                 }
-                using (SqlCommand cmd = new SqlCommand(sp2, myConnection))
-                {
-                    cmd.CommandTimeout = 10000;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    myConnection.Open();
-                    Log.Info("Executing Stored Procedure: " + sp2);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    Log.Info("Finished Executing Stored Procedure: " + sp2);
-                    myConnection.Close();
-                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error occurred during Transform Process!");
+                Log.Error(ex);
+                return false;
             }
             Log.Info("Finished Transforming Data");
             return false;
