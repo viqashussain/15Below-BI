@@ -35,7 +35,7 @@ namespace UnitTests
                 using (SqlCommand cmd = new SqlCommand(command, myConnection))
                 {
                     cmd.CommandTimeout = 10000;
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.Text;
                     myConnection.Open();
                     Log.Debug("Executing Stored Procedure: " + command);
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -70,7 +70,7 @@ namespace UnitTests
                     using (SqlCommand cmd = new SqlCommand(command, myConnection))
                     {
                         cmd.CommandTimeout = 10000;
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandType = CommandType.Text;
                         myConnection.Open();
                         Log.Debug("Executing Stored Procedure: " + command);
                         SqlDataReader dr = cmd.ExecuteReader();

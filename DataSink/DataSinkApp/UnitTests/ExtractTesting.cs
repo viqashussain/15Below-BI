@@ -14,6 +14,12 @@ namespace UnitTests
         private static readonly log4net.ILog Log = log4net.LogManager.GetLogger
         (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        [SetUp]
+        public void SetUp()
+        {
+            //No SetUp Required
+        }
+
         [Test]
         public void TestExtractData()
         {
@@ -46,10 +52,6 @@ namespace UnitTests
             UnitTests.DBTestMethods.CleanDB(command, connString);
         }
 
-        [SetUp]
-        public void SetUp()
-        {
-            //No SetUp Required
-        }
+        
     }
 }
