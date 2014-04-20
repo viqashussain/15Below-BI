@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataSinkApp.Transform
+namespace UnitTests
 {
-    class TransformUnitTesting
+    class TransformTesting
     {
     }
 }
