@@ -11087,3 +11087,10 @@ ClientConnectionId:a7d9839b-b308-48c8-829b-af3f4e855c3c
 2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Program LOAD Process took: -00:00:00.0560056 to complete
 2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Program Process Cube took: 00:00:00 to complete
 2014-04-18 13:13:08,201 [7984] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-20 11:44:59,005 [11752] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-20 11:44:59,057 [11752] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-20 11:44:59,058 [11752] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-20 11:44:59,178 [11752] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-20 11:44:59,242 [11752] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-20 11:44:59,243 [11752] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-20 11:44:59,246 [11752] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData

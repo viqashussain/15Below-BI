@@ -12,7 +12,13 @@ namespace DataSinkApp.Extract
     {
 
         [TestCase]
-        public void AddTest()
+        public void TestExtractData()
+        {
+
+        }
+
+        [TestCase]
+        public void TestGetLastRecipientID()
         {
 
         }

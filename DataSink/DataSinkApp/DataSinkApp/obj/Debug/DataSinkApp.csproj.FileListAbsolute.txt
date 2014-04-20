@@ -58,3 +58,6 @@ C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp
 C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\DataSinkApp.pdb
 C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\log4net.dll
 C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\obj\Debug\DataSinkApp.csprojResolveAssemblyReference.cache
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\Database1.sdf
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\TestDataWarehouse.sdf
+C:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\DataSinkApp\bin\Debug\TestStagingDB.sdf

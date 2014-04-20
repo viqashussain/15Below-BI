@@ -42,5 +42,25 @@ namespace DataSinkApp.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\TestStagingDB.sdf")]
+        public string TestStagingDBConnectionString {
+            get {
+                return ((string)(this["TestStagingDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\TestDataWarehouse.sdf")]
+        public string TestDataWarehouseConnectionString {
+            get {
+                return ((string)(this["TestDataWarehouseConnectionString"]));
+            }
+        }
     }
 }

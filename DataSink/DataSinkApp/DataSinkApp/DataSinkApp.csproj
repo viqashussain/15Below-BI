@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -72,6 +72,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Extract\ExtractUnitTesting.cs" />
     <Compile Include="Extract\Extract.cs" />
     <Compile Include="Load\LoadUnitTesting.cs" />
@@ -88,10 +93,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestDataWarehouse.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TestDBDataSet.Designer.cs">
+    <Compile Include="TestDataWarehouseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TestDBDataSet.xsd</DependentUpon>
+      <DependentUpon>TestDataWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TestStagingDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestStagingDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Transform\TransformUnitTesting.cs" />
     <Compile Include="Transform\Transform.cs" />
@@ -102,6 +112,17 @@
     </None>
     <None Include="Customer.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,25 +139,28 @@
     <None Include="TestDataWarehouse.xss">
       <DependentUpon>TestDataWarehouse.xsd</DependentUpon>
     </None>
-    <None Include="TestDBDataSet.xsc">
-      <DependentUpon>TestDBDataSet.xsd</DependentUpon>
+    <None Include="TestDataWarehouseDataSet.xsc">
+      <DependentUpon>TestDataWarehouseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="TestDBDataSet.xsd">
+    <None Include="TestDataWarehouseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TestDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>TestDataWarehouseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TestDBDataSet.xss">
-      <DependentUpon>TestDBDataSet.xsd</DependentUpon>
+    <None Include="TestDataWarehouseDataSet.xss">
+      <DependentUpon>TestDataWarehouseDataSet.xsd</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database1.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestDB.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="TestStagingDBDataSet.xsc">
+      <DependentUpon>TestStagingDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TestStagingDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestStagingDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestStagingDBDataSet.xss">
+      <DependentUpon>TestStagingDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -162,6 +186,17 @@
       <ProductName>SQL Server Compact 4.0 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestDataWarehouse.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestStagingDB.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
