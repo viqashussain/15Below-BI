@@ -43,32 +43,41 @@ namespace DataSinkApp.Load
             {
                 sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
             }
-
-            using (SqlConnection myConnection = new SqlConnection(sqlConnString))
+            try
             {
-                //use an sp to get the data back
-                String sp1 = "TransferData";
-                //stored procedure that will be used to clear all the data in the StagingDB
-                String sp2 = "CleanStagingDB";
-                using (SqlCommand cmd = new SqlCommand(sp1, myConnection))
+
+                using (SqlConnection myConnection = new SqlConnection(sqlConnString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandTimeout = 10000;
-                    myConnection.Open();
-                    Log.Info("Executing Stored Procedure: " + sp1);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    Log.Info("Finished Executing Stored Procedure: " + sp1);
-                    myConnection.Close();
+                    //use an sp to get the data back
+                    String sp1 = "TransferData";
+                    //stored procedure that will be used to clear all the data in the StagingDB
+                    String sp2 = "CleanStagingDB";
+                    using (SqlCommand cmd = new SqlCommand(sp1, myConnection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandTimeout = 10000;
+                        myConnection.Open();
+                        Log.Info("Executing Stored Procedure: " + sp1);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        Log.Info("Finished Executing Stored Procedure: " + sp1);
+                        myConnection.Close();
+                    }
+                    using (SqlCommand cmd = new SqlCommand(sp2, myConnection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        myConnection.Open();
+                        Log.Info("Executing Stored Procedure: " + sp2);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        Log.Info("Finished Executing Stored Procedure: " + sp2);
+                        myConnection.Close();
+                    }
                 }
-                using (SqlCommand cmd = new SqlCommand(sp2, myConnection))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    myConnection.Open();
-                    Log.Info("Executing Stored Procedure: " + sp2);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    Log.Info("Finished Executing Stored Procedure: " + sp2);
-                    myConnection.Close();
-                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Exception occurred during the Load Process");
+                Log.Error(ex);
+                return true;
             }
             Log.Info("Finished Transforming Data");
             return false;

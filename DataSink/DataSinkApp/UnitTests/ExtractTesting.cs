@@ -14,21 +14,21 @@ namespace UnitTests
         private static readonly log4net.ILog Log = log4net.LogManager.GetLogger
         (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        [TestCase]
+        [Test]
         public void TestExtractData()
         {
             //Test Extract.ExtractData Method
             //Run the Extract Process
             DataSinkApp.Extract.ExtractThread.ExtractData(true);
 
-            //59 records should be added to the TESTStagingDB
+            //133 records should be added to the TESTStagingDB
             string command = "SELECT COUNT(0) FROM StagingTable";
             string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
-            int numberOfRecords = AssertDBTable(command, sqlConnString);
-            Assert.AreEqual(59, numberOfRecords);
+            int numberOfRecords = DBTestMethods.AssertDBTable(command, sqlConnString);
+            Assert.AreEqual(133, numberOfRecords);
         }
 
-        [TestCase]
+        [Test]
         public void TestGetLastRecipientID()
         {
             //Test Extract.GetLastRecipientID Method
@@ -37,39 +37,19 @@ namespace UnitTests
             Assert.AreEqual(0, recipientID);
         }
 
-        /// <summary>
-        /// Static method that is used to get count of rows from a DB
-        /// from a specific table.
-        /// </summary>
-        /// <returns>
-        /// int - number of records in the table
-        /// </returns>
-        /// <param name="command">
-        /// The command to be run on the DB.
-        /// </param>
-        /// <param name="sqlConnString">
-        /// The connection string for the database to connect to
-        /// </param>
-        public static int AssertDBTable(string command, string sqlConnString)
+        [TearDown]
+        public void TearDown()
         {
-            int countofrows = 0;
-            using (SqlConnection myConnection = new SqlConnection(sqlConnString))
-            {
-                //use an sp to get the data back
-                using (SqlCommand cmd = new SqlCommand(command, myConnection))
-                {
-                    cmd.CommandTimeout = 10000;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    myConnection.Open();
-                    Log.Debug("Executing Stored Procedure: " + command);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    Log.Debug("Finished Executing Stored Procedure: " + command);
-                    dr.Read();
-                    countofrows = (int)dr[0];
-                    myConnection.Close();
-                }
-            }
-            return countofrows;
+            //Remove all data from the StagingBD
+            string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM StagingTable;DELETE FROM TemplatesDim;";
+            string connString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
+            DBTestMethods.CleanDB(command, connString);
+        }
+
+        [SetUp]
+        public void SetUp()
+        {
+            //No SetUp Required
         }
     }
 }
