@@ -78,7 +78,7 @@ namespace DataSinkApp.Extract
                 }
                 //parameters for the stored procedure
                 SqlParameter recipientID = new SqlParameter("@recipientID", GetLastRecipientID());
-                SqlParameter enddatep = new SqlParameter("@enddate", System.DateTime.Now);
+                SqlParameter enddatep = new SqlParameter("@enddate", enddate);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Add(recipientID);
                 cmd.Parameters.Add(enddatep);
