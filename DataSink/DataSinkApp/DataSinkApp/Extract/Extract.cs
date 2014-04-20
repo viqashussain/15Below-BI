@@ -29,10 +29,18 @@ namespace DataSinkApp.Extract
         /// <returns>
         /// bool - success or failure, true for errors, false for no errors
         /// </returns>
-        public static bool ExtractData()
+        public static bool ExtractData(bool testing = false)
         {
             string customer = ConfigurationManager.AppSettings["Customer"];
-            String conn = ConfigurationManager.ConnectionStrings["sqlConnString" + customer].ConnectionString;
+            String conn = "";
+            if (testing == true)
+            {
+                conn = ConfigurationManager.ConnectionStrings["sqlConnString" + customer + "TEST"].ConnectionString;
+            }
+            else
+            {
+                conn = ConfigurationManager.ConnectionStrings["sqlConnString" + customer].ConnectionString;
+            }
             string sp = "GetData";
             using (SqlConnection con = new SqlConnection(conn))
             {
@@ -260,10 +268,18 @@ namespace DataSinkApp.Extract
         /// <returns>
         /// int - the recipientID (0 if no results returned)
         /// </returns>
-        public static int GetLastRecipientID()
+        public static int GetLastRecipientID(bool testing = false)
         {
             Log.Info("Get Last RecipientID");
-            string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringDW"].ConnectionString;
+            string sqlConnString = "";
+            if (testing == true)
+            {
+                sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
+            }
+            else
+            {
+                sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringDW"].ConnectionString;
+            }
             int recipientID = 0;
             using (SqlConnection myConnection = new SqlConnection(sqlConnString))
             {

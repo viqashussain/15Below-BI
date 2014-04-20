@@ -30,11 +30,19 @@ namespace DataSinkApp.Load
         /// <returns>
         /// bool - success or failure, true for errors, false for no errors
         /// </returns>
-        public static bool LoadData()
+        public static bool LoadData(bool testing = false)
         {
             Log.Info("Loading Data into DW");
             //only connection for the staging DB is required
-            string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
+            string sqlConnString = "";
+            if (testing == true)
+            {
+                sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
+            }
+            else
+            {
+                sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
+            }
 
             using (SqlConnection myConnection = new SqlConnection(sqlConnString))
             {

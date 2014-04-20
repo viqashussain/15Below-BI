@@ -29,10 +29,18 @@ namespace DataSinkApp.Transform
         /// <returns>
         /// bool - success or failure, true for errors, false for no errors
         /// </returns>
-        public static bool TransformData()
+        public static bool TransformData(bool testing = false)
         {
             Log.Info("Transforming Data");
-            string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
+            string sqlConnString = "";
+            if (testing == true)
+            {
+                sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
+            }
+            else
+            {
+                sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDB"].ConnectionString;
+            }
 
             using (SqlConnection myConnection = new SqlConnection(sqlConnString))
             {
