@@ -24,7 +24,7 @@ namespace UnitTests
             //133 records should be added to the TESTStagingDB
             string command = "SELECT COUNT(0) FROM StagingTable";
             string sqlConnString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
-            int numberOfRecords = DBTestMethods.AssertDBTable(command, sqlConnString);
+            int numberOfRecords = UnitTests.DBTestMethods.AssertDBTable(command, sqlConnString);
             Assert.AreEqual(133, numberOfRecords);
         }
 
@@ -43,7 +43,7 @@ namespace UnitTests
             //Remove all data from the StagingBD
             string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM StagingTable;DELETE FROM TemplatesDim;";
             string connString = ConfigurationManager.ConnectionStrings["sqlConnStringSDBTEST"].ConnectionString;
-            DBTestMethods.CleanDB(command, connString);
+            UnitTests.DBTestMethods.CleanDB(command, connString);
         }
 
         [SetUp]
