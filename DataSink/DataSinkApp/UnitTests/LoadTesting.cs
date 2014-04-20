@@ -10,7 +10,7 @@ namespace UnitTests
 {
     class LoadTesting
     {
-        [TearDown]
+        [TestFixtureTearDown]
         public void TearDown()
         {
             //Remove all data from the StagingBD
@@ -20,17 +20,16 @@ namespace UnitTests
             string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM TemplatesDim;";
             string connString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
             UnitTests.DBTestMethods.CleanDB(command, connString);
-
         }
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void SetUp()
         {
             //Run the Extract Process to get 133 records into the StagingDB
             DataSinkApp.Extract.ExtractThread.ExtractData(true);
 
             //Run the Transform Process to get the data ready for Loading
-            DataSinkApp.Load.Load.LoadData(true);
+            DataSinkApp.Transform.Transform.TransformData(true);
         }
 
         [Test]

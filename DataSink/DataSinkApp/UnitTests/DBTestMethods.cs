@@ -37,9 +37,9 @@ namespace UnitTests
                     cmd.CommandTimeout = 10000;
                     cmd.CommandType = CommandType.Text;
                     myConnection.Open();
-                    Log.Debug("Executing Stored Procedure: " + command);
+                    Log.Debug("Executing SQL: " + command);
                     SqlDataReader dr = cmd.ExecuteReader();
-                    Log.Debug("Finished Executing Stored Procedure: " + command);
+                    Log.Debug("Finished Executing SQL: " + command);
                     dr.Read();
                     countofrows = (int)dr[0];
                     myConnection.Close();
@@ -72,9 +72,9 @@ namespace UnitTests
                         cmd.CommandTimeout = 10000;
                         cmd.CommandType = CommandType.Text;
                         myConnection.Open();
-                        Log.Debug("Executing Stored Procedure: " + command);
+                        Log.Debug("Executing SQL: " + command);
                         SqlDataReader dr = cmd.ExecuteReader();
-                        Log.Debug("Finished Executing Stored Procedure: " + command);
+                        Log.Debug("Finished Executing SQL: " + command);
                         dr.Read();
                         myConnection.Close();
                     }

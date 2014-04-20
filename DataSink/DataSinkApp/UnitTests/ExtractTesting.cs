@@ -14,7 +14,7 @@ namespace UnitTests
         private static readonly log4net.ILog Log = log4net.LogManager.GetLogger
         (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void SetUp()
         {
             //No SetUp Required
@@ -43,7 +43,7 @@ namespace UnitTests
             Assert.AreEqual(0, recipientID);
         }
 
-        [TearDown]
+        [TestFixtureTearDown]
         public void TearDown()
         {
             //Remove all data from the StagingBD

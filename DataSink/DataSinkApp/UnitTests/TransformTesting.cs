@@ -12,7 +12,7 @@ namespace UnitTests
     class TransformTesting
     {
 
-        [TearDown]
+        [TestFixtureTearDown]
         public void TearDown()
         {
             //Remove all data from the StagingBD
@@ -21,7 +21,7 @@ namespace UnitTests
             UnitTests.DBTestMethods.CleanDB(command, connString);
         }
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void SetUp()
         {
             //Run the Extract Process to get 133 records into the StagingDB
@@ -39,9 +39,9 @@ namespace UnitTests
             //DataSourceDim: 48
             //ExtractsDim: 58
             //FactTable: 133
-            //FlightsDim: 104
+            //FlightsDim: 105
             //NotificationsDim: 48
-            //PaxDim: 0
+            //PaxDim: 1
             //RecipientsDim: 59
             //StagingTable: 133
             //TemplatesDim: 2
