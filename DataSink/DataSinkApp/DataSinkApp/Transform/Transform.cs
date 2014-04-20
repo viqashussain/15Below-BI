@@ -52,13 +52,6 @@ namespace DataSinkApp.Transform
                     cmd.CommandTimeout = 10000;
                     cmd.CommandType = CommandType.StoredProcedure;
                     myConnection.Open();
-
-                    //parameters for the stored procedure
-                    //SqlParameter month = new SqlParameter("@month", montharg);
-                    //SqlParameter year = new SqlParameter("@year", yeararg);
-
-                    //cmd.Parameters.Add(month);
-                    //cmd.Parameters.Add(year);
                     Log.Info("Executing Stored Procedure: " + sp1);
                     SqlDataReader dr = cmd.ExecuteReader();
                     Log.Info("Finished Executing Stored Procedure: " + sp1);
@@ -69,13 +62,6 @@ namespace DataSinkApp.Transform
                     cmd.CommandTimeout = 10000;
                     cmd.CommandType = CommandType.StoredProcedure;
                     myConnection.Open();
-
-                    //parameters for the stored procedure
-                    //SqlParameter month = new SqlParameter("@month", montharg);
-                    //SqlParameter year = new SqlParameter("@year", yeararg);
-
-                    //cmd.Parameters.Add(month);
-                    //cmd.Parameters.Add(year);
                     Log.Info("Executing Stored Procedure: " + sp2);
                     SqlDataReader dr = cmd.ExecuteReader();
                     Log.Info("Finished Executing Stored Procedure: " + sp2);
