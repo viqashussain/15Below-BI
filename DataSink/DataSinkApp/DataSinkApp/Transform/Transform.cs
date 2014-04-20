@@ -15,7 +15,7 @@ namespace DataSinkApp.Transform
     /// Class which contains all the functionality for the Transform process
     /// which will transform the data as neccessary in the StagingDB.
     /// </summary>
-    class Transform
+    public class Transform
     {
         private static readonly log4net.ILog Log = log4net.LogManager.GetLogger
         (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
