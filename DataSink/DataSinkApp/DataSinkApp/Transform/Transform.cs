@@ -75,7 +75,7 @@ namespace DataSinkApp.Transform
             {
                 Log.Error("Error occurred during Transform Process!");
                 Log.Error(ex);
-                return false;
+                return true;
             }
             Log.Info("Finished Transforming Data");
             return false;
