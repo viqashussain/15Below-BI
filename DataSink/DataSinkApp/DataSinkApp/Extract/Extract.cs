@@ -77,10 +77,19 @@ namespace DataSinkApp.Extract
                     enddate = System.DateTime.Now;
                 }
                 //parameters for the stored procedure
-                SqlParameter recipientID = new SqlParameter("@recipientID", GetLastRecipientID());
+                int recipientID = 0;
+                if (testing == true)
+                {
+                    recipientID = GetLastRecipientID(true);
+                }
+                else
+                {
+                    recipientID = GetLastRecipientID();
+                }
+                SqlParameter recipientIDp = new SqlParameter("@recipientID", recipientID);
                 SqlParameter enddatep = new SqlParameter("@enddate", enddate);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add(recipientID);
+                cmd.Parameters.Add(recipientIDp);
                 cmd.Parameters.Add(enddatep);
                 con.Open();
                 Log.Info("Executing Stored Procedure: " + sp);
