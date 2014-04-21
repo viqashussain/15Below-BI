@@ -1,3 +1,4 @@
+[Oo]bj
 *.user
 *.suo
 *.[Cc]ache
@@ -12,7 +13,6 @@ _ReSharper.*
 *.vspscc
 *.vssscc
 *.vsscc
-Debug/
 Release/
 TestResults/
 test-results.xml
