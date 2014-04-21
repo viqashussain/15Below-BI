@@ -13287,3 +13287,57 @@ ClientConnectionId:3011d582-39fd-4d48-9f3a-47e8e877e11a
 2014-04-20 21:37:56,183 [TestRunnerThread] DEBUG UnitTests.DBTestMethods Finished Executing SQL: SELECT COUNT(0) FROM PaxDim
 2014-04-20 21:37:56,184 [TestRunnerThread] DEBUG UnitTests.DBTestMethods Executing SQL: DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM StagingTable;DELETE FROM TemplatesDim;
 2014-04-20 21:37:56,279 [TestRunnerThread] DEBUG UnitTests.DBTestMethods Finished Executing SQL: DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM StagingTable;DELETE FROM TemplatesDim;
+2014-04-21 12:08:02,813 [3636] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-21 12:08:02,832 [3636] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-21 12:08:02,848 [3636] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-21 12:08:03,006 [3636] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-21 12:08:03,006 [3636] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-21 12:08:03,007 [3636] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-21 12:08:03,009 [3636] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-21 12:08:03,030 [3636] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-21 12:08:03,031 [3636] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-21 12:08:03,043 [3636] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-21 12:08:03,043 [3636] INFO  DataSinkApp.Program EXTRACT Process took: -00:00:00.2250000 to complete
+2014-04-21 12:08:03,043 [3636] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-21 12:08:03,043 [3636] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-21 12:08:03,044 [3636] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-21 12:08:03,044 [3636] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-21 12:08:03,144 [3636] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-21 12:08:03,144 [3636] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-21 12:08:03,144 [3636] INFO  DataSinkApp.Program TRANSFORM Process took: -00:00:00.1010000 to complete
+2014-04-21 12:08:03,144 [3636] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-21 12:08:03,145 [3636] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-21 12:08:03,153 [3636] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-21 12:08:03,153 [3636] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-21 12:08:03,155 [3636] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-21 12:08:03,155 [3636] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-21 12:08:03,155 [3636] INFO  DataSinkApp.Program LOAD Process took: -00:00:00.0110000 to complete
+2014-04-21 12:08:03,155 [3636] INFO  DataSinkApp.Program Process Cube took: 00:00:00 to complete
+2014-04-21 12:08:03,155 [3636] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-21 12:08:56,192 [4576] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-21 12:08:56,204 [4576] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-21 12:08:56,211 [4576] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-21 12:08:56,238 [4576] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-21 12:08:56,238 [4576] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-21 12:08:56,238 [4576] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-21 12:08:56,240 [4576] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-21 12:08:56,251 [4576] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-21 12:08:56,251 [4576] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-21 12:08:56,253 [4576] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-21 12:08:56,253 [4576] INFO  DataSinkApp.Program EXTRACT Process took: -00:00:00.0550000 to complete
+2014-04-21 12:08:56,254 [4576] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-21 12:08:56,254 [4576] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-21 12:08:56,255 [4576] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-21 12:08:56,255 [4576] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-21 12:08:56,270 [4576] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-21 12:08:56,270 [4576] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-21 12:08:56,270 [4576] INFO  DataSinkApp.Program TRANSFORM Process took: -00:00:00.0170000 to complete
+2014-04-21 12:08:56,271 [4576] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-21 12:08:56,271 [4576] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-21 12:08:56,273 [4576] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-21 12:08:56,273 [4576] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-21 12:08:56,275 [4576] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-21 12:08:56,275 [4576] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-21 12:08:56,275 [4576] INFO  DataSinkApp.Program LOAD Process took: -00:00:00.0050000 to complete
+2014-04-21 12:08:56,275 [4576] INFO  DataSinkApp.Program Process Cube took: 00:00:00 to complete
+2014-04-21 12:08:56,275 [4576] INFO  DataSinkApp.Program Data Sink Application Stopped
