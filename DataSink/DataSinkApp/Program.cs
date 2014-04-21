@@ -13,7 +13,6 @@ using DataSinkApp.Extract;
 using DataSinkApp.Transform;
 using DataSinkApp.Load;
 using log4net;
-using NUnit.Framework;
 using Microsoft.AnalysisServices;
 using Microsoft.AnalysisServices.AdomdClient;
 
