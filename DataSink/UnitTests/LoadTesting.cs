@@ -8,6 +8,7 @@ using System.Configuration;
 
 namespace UnitTests
 {
+    [TestFixture]
     class LoadTesting
     {
         [TestFixtureTearDown]
