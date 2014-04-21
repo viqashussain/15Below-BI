@@ -78,6 +78,7 @@
             <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
+        <DeploymentServerEdition>Standard</DeploymentServerEdition>
       </Options>
     </Configuration>
   </Configurations>

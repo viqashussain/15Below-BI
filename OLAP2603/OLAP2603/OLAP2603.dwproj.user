@@ -24,7 +24,6 @@
           <ObjectType>Current</ObjectType>
         </StartObject>
         <ProcessingOption>Full</ProcessingOption>
-        <DeploymentMode>DeployAll</DeploymentMode>
       </Options>
     </Configuration>
   </Configurations>
