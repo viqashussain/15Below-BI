@@ -11,17 +11,17 @@ namespace UnitTests
     [TestFixture]
     class LoadTesting
     {
-        [TestFixtureTearDown]
-        public void TearDown()
-        {
-            //Remove all data from the StagingBD
-            //The Load process should take care of this so we do not need to do it
+        //[TestFixtureTearDown]
+        //public void TearDown()
+        //{
+        //    //Remove all data from the StagingBD
+        //    //The Load process should take care of this so we do not need to do it
 
-            //Remove all data from DataWarehouse
-            string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM TemplatesDim;";
-            string connString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
-            UnitTests.DBTestMethods.CleanDB(command, connString);
-        }
+        //    //Remove all data from DataWarehouse
+        //    string command = "DELETE FROM FactTable;DELETE FROM ExtractsDim;DELETE FROM DataSourceDim;DELETE FROM NotificationsDim;DELETE FROM FlightsDim;DELETE FROM PaxDim;DELETE FROM RecipientsDim;DELETE FROM TemplatesDim;";
+        //    string connString = ConfigurationManager.ConnectionStrings["sqlConnStringDWTEST"].ConnectionString;
+        //    UnitTests.DBTestMethods.CleanDB(command, connString);
+        //}
 
         [TestFixtureSetUp]
         public void SetUp()
