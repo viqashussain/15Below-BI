@@ -50,26 +50,26 @@ namespace DataSinkApp
                 //and place this data in the staging database
                 noerrors = ExtractThread.ExtractData();
 
-                log.Info("EXTRACT Process took: " + (dt - System.DateTime.UtcNow) + " to complete");
+                log.Info("EXTRACT Process took: " + (System.DateTime.UtcNow - dt) + " to complete");
                 dt = System.DateTime.UtcNow;
 
                 //call the transform class which will modify the data as neccessary
                 //in the staging db and get it ready for transfer
                 noerrors = Transform.Transform.TransformData();
 
-                log.Info("TRANSFORM Process took: " + (dt - System.DateTime.UtcNow) + " to complete");
+                log.Info("TRANSFORM Process took: " + (System.DateTime.UtcNow - dt) + " to complete");
                 dt = System.DateTime.UtcNow;
 
                 //all the load class to load the data from the stagingdb to the data warehouse
                 noerrors = Load.Load.LoadData();
 
-                log.Info("LOAD Process took: " + (dt - System.DateTime.UtcNow) + " to complete");
+                log.Info("LOAD Process took: " + (System.DateTime.UtcNow - dt) + " to complete");
                 dt = System.DateTime.UtcNow;
 
                 //Reprocess the cube so it is update with the data.
-                //noerrors = ProcessCube();
+                noerrors = ProcessCube();
 
-                log.Info("Process Cube took: " + (dt - System.DateTime.UtcNow) + " to complete");
+                log.Info("Process Cube took: " + (System.DateTime.UtcNow - dt) + " to complete");
                 break;
             }
 
@@ -97,12 +97,12 @@ namespace DataSinkApp
             log.Info("Starting Processing of CUBE");
             string cubeConnectionString = ConfigurationManager.ConnectionStrings["sqlConnStringOLAP"].ConnectionString;
             AdomdConnection conn = new AdomdConnection(cubeConnectionString);
-            conn.Open();
-            AdomdCommand cmd = null;
+            AdomdCommand cmd = new AdomdCommand(connection: cubeConnectionString);
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "<Batch xmlns=\"https://schemas.microsoft.com/analysisservices/2003/engine\"><Parallel><Process><Object>";
             try
             {
+                conn.Open();
                 log.Info("Executing Command to Process Cube: " + cmd.CommandText);
                 cmd.ExecuteNonQuery();
             }
