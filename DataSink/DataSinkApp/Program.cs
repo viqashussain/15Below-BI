@@ -97,9 +97,10 @@ namespace DataSinkApp
             log.Info("Starting Processing of CUBE");
             string cubeConnectionString = ConfigurationManager.ConnectionStrings["sqlConnStringOLAP"].ConnectionString;
             AdomdConnection conn = new AdomdConnection(cubeConnectionString);
-            AdomdCommand cmd = new AdomdCommand(connection: cubeConnectionString);
+            AdomdCommand cmd = new AdomdCommand();
+            cmd.Connection = conn;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "<Batch xmlns=\"https://schemas.microsoft.com/analysisservices/2003/engine\"><Parallel><Process><Object>";
+            cmd.CommandText = @"<Batch xmlns=""http://schemas.microsoft.com/analysisservices/2003/engine""> <Parallel><Process xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:ddl2=""http://schemas.microsoft.com/analysisservices/2003/engine/2"" xmlns:ddl2_2=""http://schemas.microsoft.com/analysisservices/2003/engine/2/2"" xmlns:ddl100_100=""http://schemas.microsoft.com/analysisservices/2008/engine/100/100""><Object><DatabaseID>OLAP</DatabaseID><CubeID>Data Warehouse</CubeID></Object><Type>ProcessFull</Type><WriteBackTableCreation>UseExisting</WriteBackTableCreation></Process></Parallel></Batch>";
             try
             {
                 conn.Open();
