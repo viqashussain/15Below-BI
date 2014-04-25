@@ -13518,3 +13518,387 @@ ClientConnectionId:3011d582-39fd-4d48-9f3a-47e8e877e11a
    at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 105
 2014-04-23 12:47:01,090 [12612] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0460046 to complete
 2014-04-23 12:47:01,091 [12612] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 12:56:02,641 [5004] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 12:56:02,690 [5004] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 12:56:02,704 [5004] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 12:56:02,736 [5004] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 12:56:02,737 [5004] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 12:56:02,737 [5004] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 12:56:02,739 [5004] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 12:56:02,751 [5004] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 12:56:02,751 [5004] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 12:56:02,759 [5004] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 12:56:02,759 [5004] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.1110111 to complete
+2014-04-23 12:56:02,760 [5004] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 12:56:02,760 [5004] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 12:56:02,777 [5004] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 12:56:02,777 [5004] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 12:56:02,803 [5004] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 12:56:02,803 [5004] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 12:56:02,803 [5004] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:00.0440044 to complete
+2014-04-23 12:56:02,804 [5004] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 12:56:02,804 [5004] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 12:56:02,808 [5004] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-23 12:56:02,808 [5004] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-23 12:56:02,812 [5004] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-23 12:56:02,812 [5004] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-23 12:56:02,812 [5004] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.0090009 to complete
+2014-04-23 12:56:02,812 [5004] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 12:56:02,854 [5004] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 12:56:02,854 [5004] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: XML for Analysis parser: The Trusted_Connection property was not recognized.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 105
+2014-04-23 12:56:02,857 [5004] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0450045 to complete
+2014-04-23 12:56:02,857 [5004] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 12:58:01,047 [14480] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 12:58:01,058 [14480] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 12:58:01,065 [14480] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 12:58:01,452 [14480] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 12:58:01,452 [14480] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 12:58:01,452 [14480] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 12:58:01,457 [14480] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 12:58:01,470 [14480] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 12:58:01,470 [14480] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 12:58:01,472 [14480] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 12:58:01,472 [14480] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.4190419 to complete
+2014-04-23 12:58:01,473 [14480] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 12:58:01,473 [14480] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 12:58:01,474 [14480] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 12:58:01,474 [14480] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 12:58:01,490 [14480] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 12:58:01,490 [14480] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 12:58:01,490 [14480] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:00.0180018 to complete
+2014-04-23 12:58:01,490 [14480] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 12:58:01,491 [14480] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 12:58:01,492 [14480] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-23 12:58:01,492 [14480] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-23 12:58:01,494 [14480] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-23 12:58:01,494 [14480] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-23 12:58:01,494 [14480] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.0040004 to complete
+2014-04-23 12:58:01,495 [14480] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 12:58:01,539 [14480] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 12:58:01,540 [14480] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: XML for Analysis parser: The Trusted_Connection property was not recognized.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 105
+2014-04-23 12:58:01,542 [14480] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0480048 to complete
+2014-04-23 12:58:01,542 [14480] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 13:05:30,865 [14140] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 13:05:30,924 [14140] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 13:05:30,924 [14140] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 13:05:30,952 [14140] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 13:05:30,952 [14140] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 13:05:30,952 [14140] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 13:05:30,954 [14140] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 13:05:31,645 [14140] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 13:05:31,645 [14140] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 13:05:31,845 [14140] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 13:05:31,845 [14140] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.9730973 to complete
+2014-04-23 13:05:31,845 [14140] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 13:05:31,846 [14140] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 13:05:32,353 [14140] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 13:05:32,353 [14140] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 13:05:33,697 [14140] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 13:05:33,697 [14140] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 13:05:33,697 [14140] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:01.8521852 to complete
+2014-04-23 13:05:33,698 [14140] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 13:05:33,698 [14140] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 13:05:33,891 [14140] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-23 13:05:33,891 [14140] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-23 13:05:34,166 [14140] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-23 13:05:34,166 [14140] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-23 13:05:34,166 [14140] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.4690469 to complete
+2014-04-23 13:05:34,168 [14140] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 13:05:34,254 [14140] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 13:05:34,254 [14140] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: XML for Analysis parser: The Trusted_Connection property was not recognized.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 105
+2014-04-23 13:05:34,259 [14140] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0930093 to complete
+2014-04-23 13:05:34,259 [14140] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 13:08:36,467 [4868] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 13:08:36,478 [4868] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 13:08:36,479 [4868] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 13:08:36,502 [4868] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 13:08:36,503 [4868] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 13:08:36,503 [4868] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 13:08:36,505 [4868] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 13:08:37,635 [4868] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 13:08:37,636 [4868] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 13:08:38,382 [4868] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 13:08:38,383 [4868] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:01.9091909 to complete
+2014-04-23 13:08:38,383 [4868] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 13:08:38,383 [4868] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 13:08:39,826 [4868] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 13:08:39,827 [4868] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 13:08:41,823 [4868] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 13:08:41,823 [4868] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 13:08:41,823 [4868] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:03.4393439 to complete
+2014-04-23 13:08:41,824 [4868] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 13:08:41,824 [4868] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 13:08:42,895 [4868] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-23 13:08:42,895 [4868] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-23 13:08:43,999 [4868] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-23 13:08:43,999 [4868] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-23 13:08:43,999 [4868] INFO  DataSinkApp.Program LOAD Process took: 00:00:02.1762176 to complete
+2014-04-23 13:08:44,000 [4868] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 13:08:44,077 [4868] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 13:08:44,077 [4868] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: XML for Analysis parser: The Trusted_Connection property was not recognized.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 105
+2014-04-23 13:08:44,080 [4868] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0810081 to complete
+2014-04-23 13:08:44,080 [4868] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 13:10:10,721 [4868] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 13:10:10,732 [4868] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 13:10:10,733 [4868] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 13:10:10,757 [4868] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 13:10:10,758 [4868] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 13:10:10,758 [4868] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 13:10:10,760 [4868] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 13:10:17,846 [4868] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 13:10:17,846 [4868] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 13:10:25,672 [4868] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 13:10:25,672 [4868] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:14.9444943 to complete
+2014-04-23 13:10:25,673 [4868] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 13:10:25,674 [4868] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 13:10:33,208 [4868] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 13:10:33,208 [4868] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 13:10:41,479 [4868] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 13:10:41,479 [4868] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 13:10:41,479 [4868] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:15.8065805 to complete
+2014-04-23 13:10:41,479 [4868] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 13:10:41,480 [4868] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 13:10:46,488 [4868] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-23 13:10:46,488 [4868] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-23 13:10:52,383 [4868] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-23 13:10:52,383 [4868] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-23 13:10:52,383 [4868] INFO  DataSinkApp.Program LOAD Process took: 00:00:10.9040903 to complete
+2014-04-23 13:10:52,385 [4868] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 13:10:52,468 [4868] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 13:10:52,468 [4868] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: XML for Analysis parser: The Trusted_Connection property was not recognized.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 105
+2014-04-23 13:10:52,471 [4868] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0870087 to complete
+2014-04-23 13:10:52,471 [4868] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 20:51:07,305 [380] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 20:51:07,326 [380] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 20:51:07,327 [380] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 20:51:07,457 [380] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 20:51:07,458 [380] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 20:51:07,458 [380] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 20:51:07,460 [380] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 20:51:13,941 [380] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 20:51:13,942 [380] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 20:51:23,182 [380] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 20:51:23,182 [380] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:15.8700000 to complete
+2014-04-23 20:51:23,183 [380] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 20:51:23,183 [380] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 20:51:31,504 [380] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 20:51:31,504 [380] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 20:51:42,956 [380] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 20:51:42,956 [380] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 20:51:42,956 [380] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:19.7740000 to complete
+2014-04-23 20:51:42,957 [380] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 20:51:42,957 [380] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 20:51:49,307 [380] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: TransferData
+2014-04-23 20:51:49,307 [380] INFO  DataSinkApp.Load.Load Executing Stored Procedure: CleanStagingDB
+2014-04-23 20:51:55,506 [380] INFO  DataSinkApp.Load.Load Finished Executing Stored Procedure: CleanStagingDB
+2014-04-23 20:51:55,506 [380] INFO  DataSinkApp.Load.Load Finished Transforming Data
+2014-04-23 20:51:55,507 [380] INFO  DataSinkApp.Program LOAD Process took: 00:00:12.5500000 to complete
+2014-04-23 20:51:55,508 [380] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 20:51:55,629 [380] INFO  DataSinkApp.Program Executing Command to Process Cube: <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine"><Parallel><Process><Object>
+2014-04-23 20:51:55,690 [380] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 20:51:55,690 [380] ERROR DataSinkApp.Program System.InvalidOperationException: The Connection property was not set on the Command object.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.CheckCanExecute()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteNonQuery()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 107
+2014-04-23 20:51:55,694 [380] INFO  DataSinkApp.Program Process Cube took: 00:00:00.1870000 to complete
+2014-04-23 20:51:55,694 [380] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 20:56:19,941 [12796] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 20:56:19,955 [12796] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 20:56:19,964 [12796] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 20:56:19,990 [12796] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 20:56:19,990 [12796] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 20:56:19,990 [12796] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 20:56:19,992 [12796] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 20:56:20,117 [12796] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 20:56:20,117 [12796] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 20:56:20,123 [12796] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 20:56:20,124 [12796] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.1750000 to complete
+2014-04-23 20:56:20,124 [12796] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 20:56:20,124 [12796] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 20:56:20,303 [12796] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 20:56:20,303 [12796] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 20:56:20,617 [12796] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 20:56:20,617 [12796] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 20:56:20,617 [12796] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:00.4930000 to complete
+2014-04-23 20:56:20,618 [12796] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 20:56:20,618 [12796] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 20:56:20,716 [12796] ERROR DataSinkApp.Load.Load Exception occurred during the Load Process
+2014-04-23 20:56:20,716 [12796] ERROR DataSinkApp.Load.Load System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__DataSour__9E4342C9AF425A39'. Cannot insert duplicate key in object 'dbo.DataSourceDim'. The duplicate key value is (4158713).
+Violation of PRIMARY KEY constraint 'PK__Extracts__9CD503D518F56C9D'. Cannot insert duplicate key in object 'dbo.ExtractsDim'. The duplicate key value is (3460).
+Violation of PRIMARY KEY constraint 'PK__FlightsD__2987DA45B9E758F7'. Cannot insert duplicate key in object 'dbo.FlightsDim'. The duplicate key value is (5024).
+Violation of PRIMARY KEY constraint 'PK__Notifica__3CE5C07C094C34F6'. Cannot insert duplicate key in object 'dbo.NotificationsDim'. The duplicate key value is (2868).
+Violation of PRIMARY KEY constraint 'PK__Recipien__371A0767E49B1D76'. Cannot insert duplicate key in object 'dbo.RecipientsDim'. The duplicate key value is (3686).
+Violation of PRIMARY KEY constraint 'PK__Template__E2B549665DD3A405'. Cannot insert duplicate key in object 'dbo.TemplatesDim'. The duplicate key value is (132).
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at DataSinkApp.Load.Load.LoadData(Boolean testing) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Load\Load.cs:line 61
+ClientConnectionId:141b71c4-5acb-4cc6-8e8c-26925a9b45e3
+2014-04-23 20:56:20,719 [12796] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.1020000 to complete
+2014-04-23 20:56:20,720 [12796] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 20:56:20,742 [12796] INFO  DataSinkApp.Program Executing Command to Process Cube: <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine"><Parallel><Process><Object>
+2014-04-23 20:56:20,826 [12796] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 20:56:20,826 [12796] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: The Batch element at line 7, column 89 (namespace https://schemas.microsoft.com/analysisservices/2003/engine) cannot appear under Envelope/Body/Execute/Command.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteAny(ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteNonQuery()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 108
+2014-04-23 20:56:20,827 [12796] INFO  DataSinkApp.Program Process Cube took: 00:00:00.1080000 to complete
+2014-04-23 20:56:20,827 [12796] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 21:03:09,900 [14656] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 21:03:09,925 [14656] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 21:03:09,934 [14656] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 21:03:09,964 [14656] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 21:03:09,964 [14656] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 21:03:09,965 [14656] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 21:03:09,967 [14656] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 21:03:10,119 [14656] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 21:03:10,119 [14656] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 21:03:10,139 [14656] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 21:03:10,139 [14656] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.2270000 to complete
+2014-04-23 21:03:10,140 [14656] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 21:03:10,140 [14656] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 21:03:10,193 [14656] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 21:03:10,193 [14656] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 21:03:10,214 [14656] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 21:03:10,214 [14656] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 21:03:10,214 [14656] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:00.0750000 to complete
+2014-04-23 21:03:10,215 [14656] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 21:03:10,215 [14656] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 21:03:10,240 [14656] ERROR DataSinkApp.Load.Load Exception occurred during the Load Process
+2014-04-23 21:03:10,240 [14656] ERROR DataSinkApp.Load.Load System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__DataSour__9E4342C9AF425A39'. Cannot insert duplicate key in object 'dbo.DataSourceDim'. The duplicate key value is (4158713).
+Violation of PRIMARY KEY constraint 'PK__Extracts__9CD503D518F56C9D'. Cannot insert duplicate key in object 'dbo.ExtractsDim'. The duplicate key value is (3460).
+Violation of PRIMARY KEY constraint 'PK__FlightsD__2987DA45B9E758F7'. Cannot insert duplicate key in object 'dbo.FlightsDim'. The duplicate key value is (5024).
+Violation of PRIMARY KEY constraint 'PK__Notifica__3CE5C07C094C34F6'. Cannot insert duplicate key in object 'dbo.NotificationsDim'. The duplicate key value is (2868).
+Violation of PRIMARY KEY constraint 'PK__Recipien__371A0767E49B1D76'. Cannot insert duplicate key in object 'dbo.RecipientsDim'. The duplicate key value is (3686).
+Violation of PRIMARY KEY constraint 'PK__Template__E2B549665DD3A405'. Cannot insert duplicate key in object 'dbo.TemplatesDim'. The duplicate key value is (132).
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at DataSinkApp.Load.Load.LoadData(Boolean testing) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Load\Load.cs:line 61
+ClientConnectionId:42a1ae34-3c2f-418f-9f9e-725a5a386eba
+2014-04-23 21:03:10,243 [14656] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.0290000 to complete
+2014-04-23 21:03:10,243 [14656] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 21:03:10,265 [14656] INFO  DataSinkApp.Program Executing Command to Process Cube: <Batch xmlns=http://schemas.microsoft.com/analysisservices/2003/engine> <Parallel><Process xmlns:xsd=http://www.w3.org/2001/XMLSchemaxmlns:xsi=http://www.w3.org/2001/XMLSchema-instancexmlns:ddl2=http://schemas.microsoft.com/analysisservices/2003/engine/2xmlns:ddl2_2=http://schemas.microsoft.com/analysisservices/2003/engine/2/2xmlns:ddl100_100=http://schemas.microsoft.com/analysisservices/2008/engine/100/100><Object><DatabaseID>OLAP</DatabaseID><CubeID>Data Warehouse</CubeID></Object><Type>ProcessFull</Type><WriteBackTableCreation>UseExisting</WriteBackTableCreation></Process></Parallel></Batch>
+2014-04-23 21:03:10,277 [14656] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 21:03:10,278 [14656] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: XML parsing failed at line 7, column 29: Quote expected.
+.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteAny(ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteNonQuery()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 108
+2014-04-23 21:03:10,278 [14656] INFO  DataSinkApp.Program Process Cube took: 00:00:00.0350000 to complete
+2014-04-23 21:03:10,278 [14656] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-23 21:06:03,323 [8304] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-23 21:06:03,344 [8304] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-23 21:06:03,355 [8304] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-23 21:06:03,388 [8304] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-23 21:06:03,388 [8304] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-23 21:06:03,388 [8304] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-23 21:06:03,390 [8304] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-23 21:06:03,568 [8304] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-23 21:06:03,568 [8304] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-23 21:06:03,575 [8304] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-23 21:06:03,575 [8304] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.2410000 to complete
+2014-04-23 21:06:03,576 [8304] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-23 21:06:03,576 [8304] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-23 21:06:03,602 [8304] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-23 21:06:03,602 [8304] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-23 21:06:03,624 [8304] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-23 21:06:03,624 [8304] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-23 21:06:03,624 [8304] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:00.0490000 to complete
+2014-04-23 21:06:03,625 [8304] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-23 21:06:03,625 [8304] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-23 21:06:03,650 [8304] ERROR DataSinkApp.Load.Load Exception occurred during the Load Process
+2014-04-23 21:06:03,650 [8304] ERROR DataSinkApp.Load.Load System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__DataSour__9E4342C9AF425A39'. Cannot insert duplicate key in object 'dbo.DataSourceDim'. The duplicate key value is (4158713).
+Violation of PRIMARY KEY constraint 'PK__Extracts__9CD503D518F56C9D'. Cannot insert duplicate key in object 'dbo.ExtractsDim'. The duplicate key value is (3460).
+Violation of PRIMARY KEY constraint 'PK__FlightsD__2987DA45B9E758F7'. Cannot insert duplicate key in object 'dbo.FlightsDim'. The duplicate key value is (5024).
+Violation of PRIMARY KEY constraint 'PK__Notifica__3CE5C07C094C34F6'. Cannot insert duplicate key in object 'dbo.NotificationsDim'. The duplicate key value is (2868).
+Violation of PRIMARY KEY constraint 'PK__Recipien__371A0767E49B1D76'. Cannot insert duplicate key in object 'dbo.RecipientsDim'. The duplicate key value is (3686).
+Violation of PRIMARY KEY constraint 'PK__Template__E2B549665DD3A405'. Cannot insert duplicate key in object 'dbo.TemplatesDim'. The duplicate key value is (132).
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at DataSinkApp.Load.Load.LoadData(Boolean testing) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Load\Load.cs:line 61
+ClientConnectionId:f7795f59-15c4-45cb-a0ce-07336483c81a
+2014-04-23 21:06:03,652 [8304] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.0280000 to complete
+2014-04-23 21:06:03,653 [8304] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-23 21:06:03,675 [8304] INFO  DataSinkApp.Program Executing Command to Process Cube: <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"> <Parallel><Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100"><Object><DatabaseID>OLAP</DatabaseID><CubeID>Data Warehouse</CubeID></Object><Type>ProcessFull</Type><WriteBackTableCreation>UseExisting</WriteBackTableCreation></Process></Parallel></Batch>
+2014-04-23 21:06:04,630 [8304] ERROR DataSinkApp.Program An Error occurred during the processing of the CUBE
+2014-04-23 21:06:04,630 [8304] ERROR DataSinkApp.Program Microsoft.AnalysisServices.AdomdClient.AdomdErrorResponseException: Server: The current operation was cancelled because another operation in the transaction failed.
+Internal error: The operation terminated unsuccessfully.
+Errors in the OLAP storage engine: An error occurred while processing the 'Recipients Dim' partition of the 'Recipients Dim' measure group for the 'Data Warehouse' cube from the OLAP database.
+Errors in the OLAP storage engine: The process operation ended because the number of errors encountered during processing reached the defined limit of allowable errors for the operation.
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.IExecuteProvider.ExecuteAny(ICommandContentProvider contentProvider, AdomdPropertyCollection commandProperties, IDataParameterCollection parameters)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteNonQuery()
+   at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 108
+2014-04-23 21:06:04,631 [8304] INFO  DataSinkApp.Program Process Cube took: 00:00:00.9790000 to complete
+2014-04-23 21:06:04,631 [8304] INFO  DataSinkApp.Program Data Sink Application Stopped
