@@ -13902,3 +13902,53 @@ Errors in the OLAP storage engine: The process operation ended because the numbe
    at DataSinkApp.Program.ProcessCube() in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Program.cs:line 108
 2014-04-23 21:06:04,631 [8304] INFO  DataSinkApp.Program Process Cube took: 00:00:00.9790000 to complete
 2014-04-23 21:06:04,631 [8304] INFO  DataSinkApp.Program Data Sink Application Stopped
+2014-04-25 15:07:39,844 [2056] INFO  DataSinkApp.Program Data Sink Application Started
+2014-04-25 15:07:39,856 [2056] INFO  DataSinkApp.Extract.ExtractThread Starting Extract of Data
+2014-04-25 15:07:39,863 [2056] INFO  DataSinkApp.Extract.ExtractThread Get Last RecipientID
+2014-04-25 15:07:39,888 [2056] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetLastRecipientID
+2014-04-25 15:07:39,930 [2056] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetLastRecipientID
+2014-04-25 15:07:39,931 [2056] DEBUG DataSinkApp.Extract.ExtractThread Finished Get Last RecipientID
+2014-04-25 15:07:39,936 [2056] INFO  DataSinkApp.Extract.ExtractThread Executing Stored Procedure: GetData
+2014-04-25 15:07:39,961 [2056] INFO  DataSinkApp.Extract.ExtractThread Finished Executing Stored Procedure: GetData
+2014-04-25 15:07:39,961 [2056] INFO  DataSinkApp.Extract.ExtractThread Writing to Destination
+2014-04-25 15:07:40,017 [2056] INFO  DataSinkApp.Extract.ExtractThread Finished Extracting of Data
+2014-04-25 15:07:40,017 [2056] INFO  DataSinkApp.Program EXTRACT Process took: 00:00:00.1670167 to complete
+2014-04-25 15:07:40,018 [2056] INFO  DataSinkApp.Transform.Transform Transforming Data
+2014-04-25 15:07:40,018 [2056] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: StageStagingData
+2014-04-25 15:07:40,162 [2056] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: StageStagingData
+2014-04-25 15:07:40,163 [2056] INFO  DataSinkApp.Transform.Transform Executing Stored Procedure: TransformData
+2014-04-25 15:07:40,278 [2056] INFO  DataSinkApp.Transform.Transform Finished Executing Stored Procedure: TransformData
+2014-04-25 15:07:40,278 [2056] INFO  DataSinkApp.Transform.Transform Finished Transforming Data
+2014-04-25 15:07:40,278 [2056] INFO  DataSinkApp.Program TRANSFORM Process took: 00:00:00.2610261 to complete
+2014-04-25 15:07:40,279 [2056] INFO  DataSinkApp.Load.Load Loading Data into DW
+2014-04-25 15:07:40,279 [2056] INFO  DataSinkApp.Load.Load Executing Stored Procedure: TransferData
+2014-04-25 15:07:40,413 [2056] ERROR DataSinkApp.Load.Load Exception occurred during the Load Process
+2014-04-25 15:07:40,413 [2056] ERROR DataSinkApp.Load.Load System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK__DataSour__9E4342C9AF425A39'. Cannot insert duplicate key in object 'dbo.DataSourceDim'. The duplicate key value is (4158713).
+Violation of PRIMARY KEY constraint 'PK__Extracts__9CD503D518F56C9D'. Cannot insert duplicate key in object 'dbo.ExtractsDim'. The duplicate key value is (3460).
+Violation of PRIMARY KEY constraint 'PK__FlightsD__2987DA45B9E758F7'. Cannot insert duplicate key in object 'dbo.FlightsDim'. The duplicate key value is (5024).
+Violation of PRIMARY KEY constraint 'PK__Notifica__3CE5C07C094C34F6'. Cannot insert duplicate key in object 'dbo.NotificationsDim'. The duplicate key value is (2868).
+Violation of PRIMARY KEY constraint 'PK__Recipien__371A0767E49B1D76'. Cannot insert duplicate key in object 'dbo.RecipientsDim'. The duplicate key value is (3686).
+Violation of PRIMARY KEY constraint 'PK__Template__E2B549665DD3A405'. Cannot insert duplicate key in object 'dbo.TemplatesDim'. The duplicate key value is (132).
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at DataSinkApp.Load.Load.LoadData(Boolean testing) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\DataSink\DataSinkApp\Load\Load.cs:line 61
+ClientConnectionId:99578bfe-3318-424d-b9de-9ca99bfa9184
+2014-04-25 15:07:40,416 [2056] INFO  DataSinkApp.Program LOAD Process took: 00:00:00.1380138 to complete
+2014-04-25 15:07:40,417 [2056] INFO  DataSinkApp.Program Starting Processing of CUBE
+2014-04-25 15:07:40,504 [2056] INFO  DataSinkApp.Program Executing Command to Process Cube: <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"> <Parallel><Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100"><Object><DatabaseID>OLAP</DatabaseID><CubeID>Data Warehouse</CubeID></Object><Type>ProcessFull</Type><WriteBackTableCreation>UseExisting</WriteBackTableCreation></Process></Parallel></Batch>
