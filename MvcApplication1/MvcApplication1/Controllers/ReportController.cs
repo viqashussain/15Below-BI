@@ -52,10 +52,13 @@ namespace MvcApplication1.Controllers
         {
             log.Info("In ViewRecipients");
             RecipientModel recipientModel = RecipientsReport(notificationID, extractID, sentTo);
-            recipientModel.NotificationName = notificationDesc;
-            recipientModel.PNR = pnr;
-            recipientModel.ExtractID = extractID;
-            recipientModel.NotificationID = notificationID;
+            if (recipientModel != null)
+            {
+                recipientModel.NotificationName = notificationDesc;
+                recipientModel.PNR = pnr;
+                recipientModel.ExtractID = extractID;
+                recipientModel.NotificationID = notificationID;
+            }
             return View("ViewRecipients", recipientModel);
         }
 
@@ -78,7 +81,10 @@ namespace MvcApplication1.Controllers
         {
             log.Info("In ViewFlights");
             FlightsModel flightsModel = FlightsReport(flightID, extractID);
-            flightsModel.PNR = pnr;
+            if (flightsModel != null)
+            {
+                flightsModel.PNR = pnr;
+            }
             return View("ViewFlights", flightsModel);
         }
 
@@ -101,7 +107,10 @@ namespace MvcApplication1.Controllers
         {
             log.Info("In ViewPax");
             PaxModel paxModel = PaxReport(paxID, extractID);
-            paxModel.PNR = pnr;
+            if (paxModel != null)
+            {
+                paxModel.PNR = pnr;
+            }
             return View("ViewPax", paxModel);
         }
 
@@ -139,10 +148,13 @@ namespace MvcApplication1.Controllers
             //get notifications by notification ID
             log.Info("In ViewNotifications");
             NotificationsReportModel notificationsModel = NotificationsReport(notificationID, dataSourceID, notificationDesc, recipientID, extractID);
-            notificationsModel.DataSourceName = dataSourceName;
-            notificationsModel.PNR = pnr;
-            notificationsModel.DataSourceID = dataSourceID;
-            notificationsModel.ExtractID = extractID;
+            if (notificationsModel != null)
+            {
+                notificationsModel.DataSourceName = dataSourceName;
+                notificationsModel.PNR = pnr;
+                notificationsModel.DataSourceID = dataSourceID;
+                notificationsModel.ExtractID = extractID;
+            }
             return View("ViewNotifications", notificationsModel);
         }
 
@@ -166,10 +178,13 @@ namespace MvcApplication1.Controllers
         {
             log.Info("In ViewExtracts");
             ExtractsModel extractsModel = ExtractsReport(dataSourceID, recipientID);
-            extractsModel.DataSourceName = dataSourceName;
-            extractsModel.DataSourceID = dataSourceID;
-            extractsModel.DataSourceName = dataSourceName;
-            extractsModel.RecipientID = recipientID;
+            if (extractsModel != null)
+            {
+                extractsModel.DataSourceName = dataSourceName;
+                extractsModel.DataSourceID = dataSourceID;
+                extractsModel.DataSourceName = dataSourceName;
+                extractsModel.RecipientID = recipientID;
+            }
             return View("ViewExtracts", extractsModel);
         }
 
@@ -199,8 +214,11 @@ namespace MvcApplication1.Controllers
         {
             log.Info("In ViewDataSources");
             DataSourcesModel dataSourcesModel = DataSourcesReport(notificationID, datasourcename, extractID);
-            dataSourcesModel.NotificationName = notificationDesc;
-            dataSourcesModel.PNR = pnr;
+            if (dataSourcesModel != null)
+            {
+                dataSourcesModel.NotificationName = notificationDesc;
+                dataSourcesModel.PNR = pnr;
+            }
             return View("ViewDataSources", dataSourcesModel);
         }
 
@@ -394,6 +412,7 @@ namespace MvcApplication1.Controllers
                         {
                             log.Error("ERROR when trying to read records");
                             log.Error(ex);
+                            return null;
                         }
                     }
                     con.Close();
@@ -401,6 +420,7 @@ namespace MvcApplication1.Controllers
                 catch (Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException ex)
                 {
                     log.Error(ex);
+                    return null;
                 }
             }
             return model;
@@ -531,6 +551,7 @@ namespace MvcApplication1.Controllers
                         {
                             log.Error("ERROR when trying to read recrods");
                             log.Error(ex);
+                            return null;
                         }
                     }
                     con.Close();
@@ -538,6 +559,7 @@ namespace MvcApplication1.Controllers
                 catch (Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException ex)
                 {
                     log.Error(ex);
+                    return null;
                 }
             }
             return model;
@@ -688,6 +710,7 @@ namespace MvcApplication1.Controllers
                         {
                             log.Error("ERROR when trying to read recrods");
                             log.Error(ex);
+                            return null;
                         }
                     }
                     con.Close();
@@ -695,6 +718,7 @@ namespace MvcApplication1.Controllers
                 catch (Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException ex)
                 {
                     log.Error(ex);
+                    return null;
                 }
             }
             return model;
@@ -808,6 +832,7 @@ namespace MvcApplication1.Controllers
                         {
                             log.Error("ERROR when trying to read recrods");
                             log.Error(ex);
+                            return null;
                         }
                     }
                     con.Close();
@@ -815,6 +840,7 @@ namespace MvcApplication1.Controllers
                 catch (Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException ex)
                 {
                     log.Error(ex);
+                    return null;
                 }
             }
             return model;
@@ -946,6 +972,7 @@ namespace MvcApplication1.Controllers
                         {
                             log.Error("ERROR when trying to read recrods");
                             log.Error(ex);
+                            return null;
                         }
                     }
                     con.Close();
@@ -953,6 +980,7 @@ namespace MvcApplication1.Controllers
                 catch (Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException ex)
                 {
                     log.Error(ex);
+                    return null;
                 }
             }
             return model;
@@ -1057,6 +1085,7 @@ namespace MvcApplication1.Controllers
                         {
                             log.Error("ERROR when trying to read recrods");
                             log.Error(ex);
+                            return null;
                         }
                     }
                     con.Close();
@@ -1064,6 +1093,7 @@ namespace MvcApplication1.Controllers
                 catch (Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException ex)
                 {
                     log.Error(ex);
+                    return null;
                 }
             }
             return model;

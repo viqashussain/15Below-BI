@@ -4,10 +4,10 @@
 @model MvcApplication1.Models.ExtractsModel
 <!DOCTYPE html>
 
-@if (Model.ExtractID.Count == 0)
-{<p>No PNRs to Display</p>}
-else if (Model == null)
+@if (Model == null)
 {<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else if (Model.ExtractID.Count == 0)
+{<p>No PNRs to Display</p>}
 else
 {
     //if the model is empty

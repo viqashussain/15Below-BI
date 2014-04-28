@@ -36130,3 +36130,1407 @@
 2014-04-24 19:14:09,919 [15464] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Booking confirmation
 2014-04-24 19:14:09,919 [15464] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
 2014-04-24 19:14:09,919 [15464] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:20:28,157 [8972] INFO  MvcApplication1.Controllers.ReportController Controller: Search
+2014-04-28 17:20:28,170 [8972] DEBUG MvcApplication1.Controllers.ReportController notificationdesc: jkjkj
+2014-04-28 17:20:28,170 [8972] DEBUG MvcApplication1.Controllers.ReportController pnr: 
+2014-04-28 17:20:28,170 [8972] DEBUG MvcApplication1.Controllers.ReportController sentto: 
+2014-04-28 17:20:28,170 [8972] DEBUG MvcApplication1.Controllers.ReportController datasourcename: 
+2014-04-28 17:20:28,280 [8972] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:20:28,299 [8972] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:20:28,380 [8972] DEBUG MvcApplication1.Controllers.ReportController Get Notifications by NotificationDesc
+2014-04-28 17:21:48,398 [19376] INFO  MvcApplication1.Controllers.ReportController In ViewExtracts
+2014-04-28 17:21:48,400 [19376] DEBUG MvcApplication1.Controllers.ReportController Retrieving Extracts
+2014-04-28 17:21:48,400 [19376] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:21:50,587 [19376] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.ExtractsReport(Int32 dataSourceID, Int32 recipientID, String pnr, Boolean export) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 585
+2014-04-28 17:22:46,720 [12960] INFO  MvcApplication1.Controllers.ReportController In ViewRecipients
+2014-04-28 17:22:52,538 [12960] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:22:54,645 [12960] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.RecipientsReport(Int32 notificationID, Int32 extractID, String sentTo, Boolean export) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 442
+2014-04-28 17:24:29,021 [12832] INFO  MvcApplication1.Controllers.ReportController In ViewRecipients
+2014-04-28 17:24:30,990 [12832] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:24:33,138 [12832] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.RecipientsReport(Int32 notificationID, Int32 extractID, String sentTo, Boolean export) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 443
+2014-04-28 17:24:45,859 [11456] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:24:45,862 [11456] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:24:45,862 [11456] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:24:48,118 [11456] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 308
+2014-04-28 17:24:49,525 [16772] INFO  MvcApplication1.Controllers.ReportController In ViewRecipients
+2014-04-28 17:25:21,469 [16772] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:25:29,853 [16772] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.RecipientsReport(Int32 notificationID, Int32 extractID, String sentTo, Boolean export) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 443
+2014-04-28 17:26:53,246 [18104] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:26:53,272 [18104] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:26:53,272 [18104] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:26:55,433 [18104] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 308
+2014-04-28 17:29:09,113 [14808] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:29:09,135 [14808] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:29:09,136 [14808] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:29:11,297 [14808] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 326
+2014-04-28 17:29:53,746 [8284] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:29:53,772 [8284] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:29:53,773 [8284] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:29:55,953 [8284] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 326
+2014-04-28 17:30:00,046 [18044] INFO  MvcApplication1.Controllers.ReportController In ViewRecipients
+2014-04-28 17:30:00,047 [18044] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:30:02,197 [18044] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.RecipientsReport(Int32 notificationID, Int32 extractID, String sentTo, Boolean export) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 462
+2014-04-28 17:30:24,990 [19128] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:30:25,015 [19128] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:30:25,015 [19128] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:30:27,159 [19128] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 326
+2014-04-28 17:38:14,062 [2164] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:38:14,085 [2164] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:38:14,085 [2164] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:38:16,264 [2164] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 326
+2014-04-28 17:39:46,559 [2164] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:39:46,559 [2164] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:39:46,559 [2164] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:39:48,738 [2164] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49201
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.NotificationsReport(Int32 notificationID, Int32 dataSourceID, String notificationDesc, Int32 recipientID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 326
+2014-04-28 17:39:56,764 [2164] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:39:56,764 [2164] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:39:56,764 [2164] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:39:56,777 [2164] DEBUG MvcApplication1.Controllers.ReportController Get Notifications by top 10
+2014-04-28 17:39:56,907 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:39:56,907 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4091
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270605.XML
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:05:32.310
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 5
+2014-04-28 17:39:56,908 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 1
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4092
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270606.XML
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:06:32.583
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,908 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,909 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4093
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270607.XML
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:08:02.827
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,909 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4094
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270608.XML
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:08:32.880
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,909 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4095
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270609.XML
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:09:33.507
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,909 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 5
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4096
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270610.XML
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:10:33.153
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,909 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 6
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4097
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270611.XML
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:11:33.343
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,909 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 7
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4098
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270612.XML
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:12:33.507
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,909 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,910 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 8
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4099
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270613.XML
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:13:33.637
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:39:56,910 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 9
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4100
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270614.XML
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:14:33.810
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:39:56,910 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,777 [10212] INFO  MvcApplication1.Controllers.ReportController In ViewNotifications
+2014-04-28 17:40:10,777 [10212] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:40:10,777 [10212] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:10,785 [10212] DEBUG MvcApplication1.Controllers.ReportController Get Notifications by top 10
+2014-04-28 17:40:10,801 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4091
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270605.XML
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:05:32.310
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 5
+2014-04-28 17:40:10,801 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 1
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4092
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270606.XML
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:06:32.583
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,801 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 2
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4093
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270607.XML
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:08:02.827
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,801 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 3
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4094
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270608.XML
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,801 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:08:32.880
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,806 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 4
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4095
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270609.XML
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:09:33.507
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,806 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 5
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4096
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270610.XML
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:10:33.153
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,806 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 6
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4097
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270611.XML
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:11:33.343
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,806 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 7
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,806 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4098
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270612.XML
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:12:33.507
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,807 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 8
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4099
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270613.XML
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:13:33.637
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:10,807 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 9
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4100
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Galileo-Bookings-1G-BK-201311270614.XML
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-27 06:14:33.810
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: PNR
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:10,807 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 7
+2014-04-28 17:40:15,976 [13832] INFO  MvcApplication1.Controllers.ReportController Controller: Search
+2014-04-28 17:40:15,976 [13832] DEBUG MvcApplication1.Controllers.ReportController notificationdesc: kjnjinjin
+2014-04-28 17:40:15,977 [13832] DEBUG MvcApplication1.Controllers.ReportController pnr: 
+2014-04-28 17:40:15,977 [13832] DEBUG MvcApplication1.Controllers.ReportController sentto: 
+2014-04-28 17:40:15,977 [13832] DEBUG MvcApplication1.Controllers.ReportController datasourcename: 
+2014-04-28 17:40:15,977 [13832] INFO  MvcApplication1.Controllers.ReportController Retrieving Notifications
+2014-04-28 17:40:15,977 [13832] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:15,984 [13832] DEBUG MvcApplication1.Controllers.ReportController Get Notifications by NotificationDesc
+2014-04-28 17:40:43,550 [13832] INFO  MvcApplication1.Controllers.ReportController Controller: Search
+2014-04-28 17:40:43,550 [13832] DEBUG MvcApplication1.Controllers.ReportController notificationdesc: 
+2014-04-28 17:40:43,550 [13832] DEBUG MvcApplication1.Controllers.ReportController pnr: hjkl
+2014-04-28 17:40:43,550 [13832] DEBUG MvcApplication1.Controllers.ReportController sentto: 
+2014-04-28 17:40:43,550 [13832] DEBUG MvcApplication1.Controllers.ReportController datasourcename: 
+2014-04-28 17:40:43,552 [13832] DEBUG MvcApplication1.Controllers.ReportController Retrieving Extracts
+2014-04-28 17:40:43,553 [13832] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:43,563 [13832] DEBUG MvcApplication1.Controllers.ReportController Get Extracts by PNR
+2014-04-28 17:40:49,303 [7376] INFO  MvcApplication1.Controllers.ReportController In ViewExtracts
+2014-04-28 17:40:49,303 [7376] DEBUG MvcApplication1.Controllers.ReportController Retrieving Extracts
+2014-04-28 17:40:49,303 [7376] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:49,316 [7376] DEBUG MvcApplication1.Controllers.ReportController Get Extracts by top 10
+2014-04-28 17:40:49,730 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,730 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,730 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 55989
+2014-04-28 17:40:49,730 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,730 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8OAFK8
+2014-04-28 17:40:49,730 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR JENS ALMDAL
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 05/12/2013
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131119
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,731 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:40:49,732 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 55990
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8OAFK8
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR JENS ALMDAL
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 05/12/2013
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131119
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:40:49,732 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56362
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 15/01/2014
+2014-04-28 17:40:49,732 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:40:49,733 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56363
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 15/01/2014
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:40:49,733 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56395
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 17/01/2014
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,733 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:40:49,734 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56544
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 6ZW2ZM
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MRS MIEKE CAMPFORTS
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 28/01/2014
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140117
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:40:49,734 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56148
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: GWHUCA
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MS SAMANTHA HAWLEY
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/12/2013
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,734 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20-11320
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2
+2014-04-28 17:40:49,735 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56149
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: GWHUCA
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MS SAMANTHA HAWLEY
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/12/2013
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20-11320
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2
+2014-04-28 17:40:49,735 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56188
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 772YHN
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MARIA TERESA PINTO SATUE
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 06/01/2014
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131218
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,735 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ES
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:40:49,736 [7376] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56488
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4KRFS6
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR MARTIN STUETTEM
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/01/2014
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: DE
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:40:49,736 [7376] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8
+2014-04-28 17:40:50,471 [2164] INFO  MvcApplication1.Controllers.ReportController In ViewRecipients
+2014-04-28 17:40:50,472 [2164] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:50,479 [2164] DEBUG MvcApplication1.Controllers.ReportController Get Recipients by top 10
+2014-04-28 17:40:50,846 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:50,846 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,846 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56169
+2014-04-28 17:40:50,846 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,846 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: HNJ@FLSMIDTH.COM,JEAL@FLSMIDTH.COM,A.PRUSZYNSKA@CWT-ECENTER.COM
+2014-04-28 17:40:50,846 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,846 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-12-05 14:34:20.207
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Ticketing confirmation
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,847 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 1
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56170
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: HNJ@FLSMIDTH.COM,JEAL@FLSMIDTH.COM,A.PRUSZYNSKA@CWT-ECENTER.COM
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-12-05 14:34:23.253
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Booking confirmation
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,847 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 2
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56506
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: S.PURWIN@CWT-ECENTER.COM
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2014-01-15 12:32:37.553
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Ticketing confirmation
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,847 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 3
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56507
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: S.PURWIN@CWT-ECENTER.COM
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2014-01-15 13:59:58.757
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Ticketing confirmation
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,847 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 4
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56537
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: S.PURWIN@CWT-ECENTER.COM
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2014-01-17 11:37:08.200
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,847 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Ticketing confirmation
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,848 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56679
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: K.BONIECKA@CWT-ECENTER.COM
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2014-01-28 15:58:40.123
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Booking confirmation
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,848 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 6
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56312
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ABCINT.SYD.AU@CONTACTCWT.COM,BAGLEY.NICOLA@ABC.NET.AU
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-12-23 10:05:45.317
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Booking confirmation
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,848 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 7
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56313
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ABCINT.SYD.AU@CONTACTCWT.COM,BAGLEY.NICOLA@ABC.NET.AU
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-12-23 10:05:51.317
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Ticketing confirmation
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,848 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 8
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56626
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: DZAKRZEWSKA@CARLSONWAGONLIT.PL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2014-01-23 11:52:44.203
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Booking confirmation
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:50,848 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 9
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56627
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: DZAKRZEWSKA@CARLSONWAGONLIT.PL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2014-01-23 11:53:23.253
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EMAIL
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: Ticketing confirmation
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:40:50,848 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:40:52,396 [2164] INFO  MvcApplication1.Controllers.ReportController Controller: Search
+2014-04-28 17:40:52,397 [2164] DEBUG MvcApplication1.Controllers.ReportController notificationdesc: 
+2014-04-28 17:40:52,397 [2164] DEBUG MvcApplication1.Controllers.ReportController pnr: 
+2014-04-28 17:40:52,397 [2164] DEBUG MvcApplication1.Controllers.ReportController sentto: cock
+2014-04-28 17:40:52,397 [2164] DEBUG MvcApplication1.Controllers.ReportController datasourcename: 
+2014-04-28 17:40:52,397 [2164] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:52,410 [2164] DEBUG MvcApplication1.Controllers.ReportController Get Recipients by sentTo
+2014-04-28 17:40:57,295 [13832] INFO  MvcApplication1.Controllers.ReportController In ViewDataSources
+2014-04-28 17:40:57,297 [13832] DEBUG MvcApplication1.Controllers.ReportController Retrieving Data Sources
+2014-04-28 17:40:57,298 [13832] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:57,310 [13832] DEBUG MvcApplication1.Controllers.ReportController Get Data Sources by top 10
+2014-04-28 17:40:57,433 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4247976
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280928.XML
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:28:31.217
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,433 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,434 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 1
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4247985
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280929.XML
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:29:31.377
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,434 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 2
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4247994
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280930.XML
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:30:31.740
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,434 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,435 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 3
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248003
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280931.XML
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:31:32.140
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,435 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 4
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248012
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280932.XML
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:32:32.280
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,435 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 5
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248021
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280933.XML
+2014-04-28 17:40:57,435 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:33:32.500
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,436 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 6
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248030
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280934.XML
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:34:32.680
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,436 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 7
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248039
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280935.XML
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:35:32.750
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,436 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 8
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,436 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248048
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280936.XML
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:36:32.967
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:57,437 [13832] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 9
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4248058
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1G-BK-201311280937.XML
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2013-11-28 09:38:03.230
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: XML
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:40:57,437 [13832] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 16
+2014-04-28 17:40:59,563 [7376] INFO  MvcApplication1.Controllers.ReportController Controller: Search
+2014-04-28 17:40:59,563 [7376] DEBUG MvcApplication1.Controllers.ReportController notificationdesc: 
+2014-04-28 17:40:59,563 [7376] DEBUG MvcApplication1.Controllers.ReportController pnr: 
+2014-04-28 17:40:59,563 [7376] DEBUG MvcApplication1.Controllers.ReportController sentto: 
+2014-04-28 17:40:59,563 [7376] DEBUG MvcApplication1.Controllers.ReportController datasourcename: cock
+2014-04-28 17:40:59,564 [7376] DEBUG MvcApplication1.Controllers.ReportController Retrieving Data Sources
+2014-04-28 17:40:59,564 [7376] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:40:59,577 [7376] DEBUG MvcApplication1.Controllers.ReportController Get Data Sources by data source name
+2014-04-28 17:41:07,013 [2164] INFO  MvcApplication1.Controllers.ReportController In ViewExtracts
+2014-04-28 17:41:07,013 [2164] DEBUG MvcApplication1.Controllers.ReportController Retrieving Extracts
+2014-04-28 17:41:07,013 [2164] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:41:07,027 [2164] DEBUG MvcApplication1.Controllers.ReportController Get Extracts by top 10
+2014-04-28 17:41:07,186 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 55989
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8OAFK8
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR JENS ALMDAL
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 05/12/2013
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131119
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:41:07,186 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 55990
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8OAFK8
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR JENS ALMDAL
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 05/12/2013
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131119
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,186 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:41:07,187 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56362
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 15/01/2014
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:07,187 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56363
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 15/01/2014
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:07,187 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56395
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 17/01/2014
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,187 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:07,188 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56544
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 6ZW2ZM
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MRS MIEKE CAMPFORTS
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 28/01/2014
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140117
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:07,188 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56148
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: GWHUCA
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MS SAMANTHA HAWLEY
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/12/2013
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20-11320
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2
+2014-04-28 17:41:07,188 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56149
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: GWHUCA
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MS SAMANTHA HAWLEY
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/12/2013
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20-11320
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2
+2014-04-28 17:41:07,188 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56188
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 772YHN
+2014-04-28 17:41:07,188 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MARIA TERESA PINTO SATUE
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 06/01/2014
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131218
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ES
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:41:07,189 [2164] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56488
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4KRFS6
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR MARTIN STUETTEM
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/01/2014
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: DE
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:07,189 [2164] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8
+2014-04-28 17:41:09,056 [10212] INFO  MvcApplication1.Controllers.ReportController In ViewPax
+2014-04-28 17:41:09,060 [10212] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:41:09,072 [10212] DEBUG MvcApplication1.Controllers.ReportController Get Flights by extractID
+2014-04-28 17:41:09,362 [10212] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56242
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: JENS
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: -
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ALMDAL
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR
+2014-04-28 17:41:09,362 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: M
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1900-01-01 00:00:00.000
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:09,363 [10212] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:41:39,188 [18496] INFO  MvcApplication1.Controllers.ReportController In ViewExtracts
+2014-04-28 17:41:39,188 [18496] DEBUG MvcApplication1.Controllers.ReportController Retrieving Extracts
+2014-04-28 17:41:39,188 [18496] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:41:39,202 [18496] DEBUG MvcApplication1.Controllers.ReportController Get Extracts by top 10
+2014-04-28 17:41:39,383 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 55989
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8OAFK8
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR JENS ALMDAL
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 05/12/2013
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131119
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:41:39,383 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 55990
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8OAFK8
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR JENS ALMDAL
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 05/12/2013
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131119
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,383 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:41:39,384 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56362
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 15/01/2014
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:39,384 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56363
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 15/01/2014
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:39,384 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56395
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4MCKC9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR STEFAN PURWIN
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 17/01/2014
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,384 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:39,385 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56544
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 6ZW2ZM
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MRS MIEKE CAMPFORTS
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 28/01/2014
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140117
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: EN
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 9
+2014-04-28 17:41:39,385 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56148
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: GWHUCA
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MS SAMANTHA HAWLEY
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/12/2013
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20-11320
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2
+2014-04-28 17:41:39,385 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56149
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: GWHUCA
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MS SAMANTHA HAWLEY
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/12/2013
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20-11320
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 2
+2014-04-28 17:41:39,385 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56188
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 772YHN
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MARIA TERESA PINTO SATUE
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,385 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 06/01/2014
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20131218
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ES
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4
+2014-04-28 17:41:39,386 [18496] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56488
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 4KRFS6
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR MARTIN STUETTEM
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 23/01/2014
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 20140115
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: DE
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 9
+2014-04-28 17:41:39,386 [18496] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 8
+2014-04-28 17:41:41,606 [20368] INFO  MvcApplication1.Controllers.ReportController In ViewPax
+2014-04-28 17:41:41,606 [20368] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:41:41,619 [20368] DEBUG MvcApplication1.Controllers.ReportController Get Flights by extractID
+2014-04-28 17:41:41,815 [20368] INFO  MvcApplication1.Controllers.ReportController Reading Record #: 0
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 0
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 56242
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 1
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: JENS
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 2
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: -
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 3
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: ALMDAL
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 4
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: MR
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 5
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: M
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 6
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 7
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 1900-01-01 00:00:00.000
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Reading Field #: 8
+2014-04-28 17:41:41,815 [20368] DEBUG MvcApplication1.Controllers.ReportController Returned Field: 10
+2014-04-28 17:41:54,536 [20368] INFO  MvcApplication1.Controllers.ReportController In ViewPax
+2014-04-28 17:41:54,536 [20368] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:41:56,683 [20368] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:63098
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.PaxReport(Int32 PaxID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 1020
+2014-04-28 17:42:49,621 [15284] INFO  MvcApplication1.Controllers.ReportController In ViewFlights
+2014-04-28 17:42:49,625 [15284] DEBUG MvcApplication1.Controllers.ReportController Opening connection to OLAP to retrieve data
+2014-04-28 17:42:51,738 [15284] ERROR MvcApplication1.Controllers.ReportController Microsoft.AnalysisServices.AdomdClient.AdomdConnectionException: A connection cannot be made. Ensure that the server is running. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:63098
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   --- End of inner exception stack trace ---
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.GetTcpClient(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.OpenTcpConnection(ConnectionInfo connectionInfo)
+   at Microsoft.AnalysisServices.AdomdClient.XmlaClient.Connect(ConnectionInfo connectionInfo, Boolean beginSession)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Connect(Boolean toIXMLA)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.XmlaClientProvider.Microsoft.AnalysisServices.AdomdClient.AdomdConnection.IXmlaClientProviderEx.ConnectXmla()
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectToXMLA(Boolean createSession, Boolean isHTTP)
+   at Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open()
+   at MvcApplication1.Controllers.ReportController.FlightsReport(Int32 flightID, Int32 extractID) in c:\Users\viqas.hussain\Documents\GitHub\Uni\Uni\MvcApplication1\MvcApplication1\Controllers\ReportController.cs:line 886

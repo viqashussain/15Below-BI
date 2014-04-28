@@ -3,8 +3,10 @@
 }
 @model MvcApplication1.Models.DataSourcesModel
 <!DOCTYPE html>
-@if (Model.DataSourceID.Count == 0) {<p>No Data Sources to Display</p>} 
-else if (Model == null) {<p>An error has occurred while trying to process your request. Please contact support if this issue persists.</p>}
+@if (Model == null) 
+{<p>An error has occurred while trying to process your request. Please contact support if this issue persists.</p>}
+else if (Model.DataSourceID.Count == 0)
+{<p>No Data Sources to Display</p>}
 else {
 //if the model is empty
 <html>

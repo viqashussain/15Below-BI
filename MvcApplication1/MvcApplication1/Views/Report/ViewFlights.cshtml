@@ -4,8 +4,10 @@
 @model MvcApplication1.Models.FlightsModel
 <!DOCTYPE html>
 
-@if (Model.FlightID.Count == 0) {<p>No Flights to Display</p>} 
-else if (Model == null) {<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+@if (Model == null) 
+{<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else if (Model.FlightID.Count == 0)
+{<p>No Flights to Display</p>}
 else {
 //if the model is empty
 <html>

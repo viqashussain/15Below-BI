@@ -4,10 +4,10 @@
 @model MvcApplication1.Models.RecipientModel
 <!DOCTYPE html>
 
-@if (Model.RecipientID.Count == 0)
-{<p>No Recipients to Display</p>}
-else if (Model == null)
+@if (Model == null)
 {<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else if (Model.RecipientID.Count == 0)
+{<p>No Recipients to Display</p>}
 else
 {
     //if the model is empty

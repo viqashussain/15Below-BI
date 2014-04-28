@@ -4,10 +4,10 @@
 @model MvcApplication1.Models.NotificationsReportModel
 <!DOCTYPE html>
 
-@if (Model.NotificationID.Count == 0)
-{<p>No Notifications to Display</p>}
-else if (Model == null)
+@if (Model == null)
 {<p>An error has occured while trying to process yout request. Please contact support if this issue persists.</p>}
+else if (Model.NotificationID.Count == 0)
+{<p>No Notifications to Display</p>}
 else
 {
     //if the model is empty
